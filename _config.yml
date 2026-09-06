@@ -2,7 +2,7 @@ title: NextInt Inc | Android Apps by Vijay Sonawale
 description: Android apps by Vijay Sonawale. Udhari Book, Car Kundali, GovFitAI. Useful apps for Indian users. No login, 100% private.
 author: Vijay Sonawale — NextInt Inc
 url: "https://nextintinc.github.io" # the base hostname & protocol for your site
-google_analytics: G-XXXXXXXXXX
+google_analytics: G-6YHMJQ6LYN
 
 markdown: kramdown
 theme: jekyll-theme-primer # A default theme to satisfy GH pages if needed, though we provide full layouts
@@ -12,3 +12,6 @@ exclude:
   - node_modules/
   - package.json
   - package-lock.json
+
+plugins:
+  - jekyll-sitemap
