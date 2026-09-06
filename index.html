@@ -340,6 +340,22 @@ permalink: //
     </div>
   </div>
 </section>
+<section class="sw bg-bg" id="articles">
+  <div class="container">
+    <div class="head-text"><div class="sec-tag">📚 Articles &amp; Guides</div><h2>Useful Resources</h2><p>Read our latest guides, news, and informative articles.</p></div>
+    <div class="feat-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+      {% for p in site.pages %}
+        {% if p.title and p.url != '/' and p.url != '/sitemap.xml' and p.url != '/robots.txt' and p.url != '/assets/css/style.css' %}
+          <div class="feat-card fu" style="text-align:left; display:flex; flex-direction:column; padding: 20px;">
+            <h3 style="margin-bottom:10px; font-size:16px; line-height:1.4;"><a href="{{ site.url }}{{ p.url }}" style="color:var(--dark);">{{ p.title }}</a></h3>
+            {% if p.description %}<p style="margin-bottom:14px; flex-grow: 1; font-size:13px;">{{ p.description | truncate: 110 }}</p>{% endif %}
+            <a href="{{ site.url }}{{ p.url }}" style="font-weight:700; font-size: 12px; margin-top: auto; display:inline-block; color:var(--main);">Read More <i class="fa fa-arrow-right" style="font-size:10px; margin-left:4px;"></i></a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
 <div id="cta-wrap">
   <div class="container">
     <h2>All 3 Apps — Free on Google Play</h2>
