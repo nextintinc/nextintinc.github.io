@@ -1,0 +1,47 @@
+<footer id="footer-wrap">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-logo"><div class="fl-icon">N</div><div><div class="fl-name">NextInt Inc</div><div class="fl-by">by Vijay Sonawale</div></div></div>
+        <p>Building practical Android apps for everyday Indian users. Privacy-first, offline-first — no logins, no data collection.</p>
+        <p style="margin-top:10px">Legal Business Name: <strong style="color:#fff">Vijay Santosh Sonawale</strong> (Sole Proprietor), trading as <strong style="color:#fff">NextInt Inc</strong>.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Apps</h4>
+        <ul><li><a href="#apps">Udhari Book</a></li><li><a href="#apps">Car Kundali</a></li><li><a href="#apps">GovFitAI</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Privacy Policies</h4>
+        <ul>
+          <li><a href="https://vijaysonawale.github.io/udharibuuk.html" target="_blank">Udhari Book</a></li>
+          <li><a href="https://vijaysonawale.github.io/carkundali.html" target="_blank">Car Kundali</a></li>
+          <li><a href="https://vijaysonawale.github.io/govfitai.html" target="_blank">GovFitAI</a></li>
+          <li><a href="#contact">Contact &amp; Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Vijay Santosh Sonawale (Sole Proprietor), trading as <a href="#about">NextInt Inc</a> ·  Maharashtra 🇮🇳</p>
+      <div class="foot-legal"><a href="#apps">All Apps</a><a href="javascript:void(0)" onclick="eml()">Email</a><a href="https://play.google.com/store/apps/details?id=com.nextintinc.udhari_book_cash_gst_calc" target="_blank" rel="noopener">Play Store</a></div>
+    </div>
+  </div>
+</footer>
+<a href="#" class="back-top" id="btt"><i class="fa fa-chevron-up"></i></a>
+<script>
+  var _e = ['sonawalesvijay','gmail.com'].join('@');
+  function eml(){ window.location.href = 'mailto:' + _e; }
+  window.addEventListener('load',()=>{setTimeout(()=>{document.getElementById('pre').classList.add('hidden')},1400)});
+  function onav(){document.getElementById('mobnav').classList.add('open')}
+  function cnav(){document.getElementById('mobnav').classList.remove('open')}
+  const btt=document.getElementById('btt');
+  window.addEventListener('scroll',()=>{btt.classList.toggle('vis',scrollY>300)});
+  btt.addEventListener('click',e=>{e.preventDefault();scrollTo({top:0,behavior:'smooth'})});
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+  function smail(){
+    const n=document.getElementById('fn').value.trim(),em=document.getElementById('fe').value.trim(),a=document.getElementById('fa').value,m=document.getElementById('fm').value.trim();
+    if(!n||!m){alert('Please fill in your name and message.');return}
+    const s=encodeURIComponent('App Inquiry'+(a?' - '+a:'')+' | '+n),b=encodeURIComponent('Name: '+n+'\nEmail: '+em+'\nApp: '+(a||'General')+'\n\n'+m);
+    location.href='mailto:'+_e+'?subject='+s+'&body='+b;
+  }
+</script>
