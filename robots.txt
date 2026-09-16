@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nextintinc.github.io/sitemap.xml
+Sitemap: https://nextintinc.in/sitemap.xml
