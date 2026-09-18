@@ -732,10 +732,7 @@ permalink: /ladki_bahin_yojana_portal/
 
   <!-- ===== SECTION 2: ISSUES ===== -->
   <section id="issues" class="section">
-    <div class="alert alert-warning">
-      <span class="alert-icon">⚠️</span>
-      <div><strong>सूचना:</strong> खालील समस्यांपैकी कोणतीही समस्या असल्यास आपण खालील "तक्रार नोंदवा" विभागात तक्रार नोंदवू शकता. तक्रार नोंदणीसाठी <strong>₹65</strong> प्रक्रिया शुल्क आकारले जाते.</div>
-    </div>
+
 
     <div class="section-title">⚠️ सामान्य समस्या व उपाय</div>
 
@@ -844,10 +841,7 @@ permalink: /ladki_bahin_yojana_portal/
           <div class="step-num" id="snum2">2</div>
           <span class="step-label" id="slabel2">तक्रार तपशील</span>
         </div>
-        <div class="form-step">
-          <div class="step-num" id="snum3">3</div>
-          <span class="step-label" id="slabel3">शुल्क भरणा</span>
-        </div>
+
       </div>
 
       <div class="form-body">
@@ -983,53 +977,7 @@ permalink: /ladki_bahin_yojana_portal/
           </div>
           <div class="form-nav">
             <button class="btn btn-secondary" onclick="goToStep(1)">← मागे</button>
-            <button class="btn btn-primary" onclick="goToStep(3)">पुढे जा →</button>
-          </div>
-        </div>
-
-        <!-- STEP 3: PAYMENT -->
-        <div class="form-step-content" id="step3">
-          <div class="payment-box">
-            <div style="font-size:36px; margin-bottom:8px;">💳</div>
-            <div class="payment-label">तक्रार नोंदणी प्रक्रिया शुल्क</div>
-            <div class="payment-amount"><span>₹</span>65</div>
-            <div class="payment-label">एकवेळ (Non-Refundable) | Complaint Processing Fee</div>
-            <div class="payment-features">
-              <div class="payment-feature"><span class="check">✓</span> सुरक्षित पेमेंट</div>
-              <div class="payment-feature"><span class="check">✓</span> तात्काळ पावती</div>
-              <div class="payment-feature"><span class="check">✓</span> तक्रार क्रमांक मिळेल</div>
-              <div class="payment-feature"><span class="check">✓</span> 7 दिवसात उत्तर</div>
-            </div>
-
-            <div style="background:white; border:1px solid #E5E7EB; border-radius:10px; padding:14px 18px; max-width:380px; margin:0 auto 16px; text-align:left; font-size:13px; font-family:'Noto Sans Devanagari',sans-serif;">
-              <strong>तुमची माहिती:</strong><br>
-              <span style="color:var(--gray);">नाव:</span> <span id="summary-name" style="font-weight:500;">—</span><br>
-              <span style="color:var(--gray);">मोबाइल:</span> <span id="summary-mobile" style="font-weight:500;">—</span><br>
-              <span style="color:var(--gray);">तक्रार:</span> <span id="summary-type" style="font-weight:500;">—</span>
-            </div>
-
-            <!-- REPLACE THIS HREF WITH YOUR RAZORPAY LINK -->
-            <a href="YOUR_RAZORPAY_PAYMENT_LINK_HERE" target="_blank" id="pay-btn">
-              <button class="razorpay-btn" onclick="handlePayment()">
-                <span>🔒</span>
-                <span>₹65 Razorpay ने भरा</span>
-                <span class="razorpay-logo">| Powered by Razorpay</span>
-              </button>
-            </a>
-
-            <p style="font-size:12px; color:var(--gray); margin-top:12px; font-family:'Noto Sans Devanagari',sans-serif;">
-              🔒 100% सुरक्षित | UPI, Debit/Credit Card, Net Banking स्वीकारले जाते
-            </p>
-          </div>
-
-          <div class="alert alert-info">
-            <span class="alert-icon">📱</span>
-            <div>पेमेंट झाल्यावर <strong>"पेमेंट झाले - तक्रार नोंदवा"</strong> बटण दाबा. तुमच्या मोबाइलवर SMS द्वारे तक्रार क्रमांक पाठवला जाईल.</div>
-          </div>
-
-          <div class="form-nav">
-            <button class="btn btn-secondary" onclick="goToStep(2)">← मागे</button>
-            <button class="btn btn-green" onclick="submitComplaint()">✅ पेमेंट झाले - तक्रार नोंदवा</button>
+            <button class="btn btn-green" onclick="submitComplaint()">✅ तक्रार नोंदवा</button>
           </div>
         </div>
 
@@ -1130,8 +1078,6 @@ function showSection(id, tab) {
 function goToStep(n) {
   const step1 = document.getElementById('step1');
   const step2 = document.getElementById('step2');
-  const step3 = document.getElementById('step3');
-
   if (n === 2) {
     const fname = document.getElementById('fname').value.trim();
     const mobile = document.getElementById('mobile').value.trim();
@@ -1147,24 +1093,11 @@ function goToStep(n) {
     if (aadhar.length !== 12) { alert('⚠️ आधार क्रमांक 12 अंकी असावा'); return; }
   }
 
-  if (n === 3) {
-    const type = document.getElementById('complaint_type').value;
-    const desc = document.getElementById('complaint_desc').value.trim();
-    const decl = document.getElementById('declaration').checked;
-    if (!type) { alert('⚠️ तक्रारीचा प्रकार निवडा'); return; }
-    if (!desc) { alert('⚠️ तक्रारीचे वर्णन लिहा'); return; }
-    if (!decl) { alert('⚠️ घोषणेचा चेकबॉक्स चेक करा'); return; }
-    // Update summary
-    document.getElementById('summary-name').textContent = document.getElementById('fname').value;
-    document.getElementById('summary-mobile').textContent = document.getElementById('mobile').value;
-    document.getElementById('summary-type').textContent = type;
-  }
-
-  [step1, step2, step3].forEach(s => s.classList.remove('active'));
+  [step1, step2].forEach(s => s.classList.remove('active'));
   document.getElementById('step' + n).classList.add('active');
 
   // Update step indicators
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 2; i++) {
     const num = document.getElementById('snum' + i);
     const label = document.getElementById('slabel' + i);
     num.classList.remove('active', 'done');
@@ -1175,11 +1108,14 @@ function goToStep(n) {
   }
 }
 
-function handlePayment() {
-  // Payment link is set on the anchor tag above
-}
-
 function submitComplaint() {
+  const type = document.getElementById('complaint_type').value;
+  const desc = document.getElementById('complaint_desc').value.trim();
+  const decl = document.getElementById('declaration').checked;
+  if (!type) { alert('⚠️ तक्रारीचा प्रकार निवडा'); return; }
+  if (!desc) { alert('⚠️ तक्रारीचे वर्णन लिहा'); return; }
+  if (!decl) { alert('⚠️ घोषणेचा चेकबॉक्स चेक करा'); return; }
+
   const ticketNum = 'TK-' + new Date().getFullYear() + '-' + Math.random().toString(36).substr(2, 6).toUpperCase();
   document.getElementById('ticket-display').textContent = ticketNum;
 
@@ -1198,7 +1134,7 @@ function resetForm() {
   document.getElementById('success-box').style.display = 'none';
 
   // Reset step indicators
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 2; i++) {
     const num = document.getElementById('snum' + i);
     const label = document.getElementById('slabel' + i);
     num.classList.remove('active', 'done');
@@ -1220,7 +1156,7 @@ const faqs = [
   { q: "माझे पैसे बँकेत आले नाहीत, काय करावे?", a: "प्रथम आधार-बँक लिंकिंग तपासा. नंतर DBT स्टेटस लाडकी बहीण पोर्टलवर पहा. समस्या कायम राहिल्यास या पोर्टलवर तक्रार नोंदवा." },
   { q: "eKYC म्हणजे काय आणि ते कसे करावे?", a: "eKYC म्हणजे आधार OTP किंवा बायोमेट्रिकद्वारे ओळख पडताळणी. जवळच्या CSC केंद्र, आंगणवाडी किंवा ग्रामपंचायतीत जाऊन बायोमेट्रिक eKYC करता येते." },
   { q: "विधवा / घटस्फोटित महिला पात्र आहेत का?", a: "होय. विवाहित, विधवा, घटस्फोटित, परित्यक्ता — सर्व प्रकारच्या महिला पात्र आहेत, जोपर्यंत उत्पन्न मर्यादा व इतर अटी पूर्ण होतात." },
-  { q: "तक्रार नोंदणीसाठी किती शुल्क आहे?", a: "तक्रार नोंदणीसाठी ₹65 प्रक्रिया शुल्क आहे. हे शुल्क परत मिळत नाही. शुल्क भरल्यावर एक तक्रार क्रमांक दिला जातो." },
+  { q: "तक्रार नोंदणीसाठी किती शुल्क आहे?", a: "तक्रार नोंदणीसाठी कोणतेही शुल्क नाही. ही सेवा पूर्णपणे मोफत आहे." },
   { q: "तक्रार किती दिवसांत निकाली निघते?", a: "सामान्यतः 7 ते 30 कामकाजाच्या दिवसांत तक्रारीवर कार्यवाही होते. तांत्रिक समस्या असल्यास 3-7 दिवसांत सुटते." },
   { q: "एकाच कुटुंबातील दोन महिला अर्ज करू शकतात का?", a: "होय, एकाच कुटुंबातील (एकाच घरात राहणाऱ्या) दोन पात्र महिला या योजनेसाठी अर्ज करू शकतात, परंतु प्रत्येकीचे वेगळे बँक खाते असणे आवश्यक आहे." },
 ];
