@@ -197,6 +197,7 @@
     .fl-name{font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;color:#fff}
     .fl-by{font-size:11px;color:rgba(255,255,255,.4)}
     .foot-brand p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.75;max-width:280px}
+    .foot-col{text-align:left}
     .foot-col h4{font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--main);display:inline-block}
     .foot-col ul li{padding:7px 0;border-bottom:1px dotted rgba(255,255,255,.08)}
     .foot-col ul li:last-child{border-bottom:none}
