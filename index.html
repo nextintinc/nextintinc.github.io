@@ -247,8 +247,7 @@ permalink: /
     .cat-tab{padding:6px 12px;font-size:11px}
   }
 
-  .ps-card{position:relative;cursor:pointer}
-  .btn-install::after{content:'';position:absolute;inset:0;z-index:1}
+  .ps-card{position:relative;cursor:pointer;-webkit-user-select:none;user-select:none}
   .btn-playstore{position:relative;z-index:2}
 </style>
 
@@ -753,6 +752,17 @@ document.querySelectorAll('.cat-tab').forEach(tab => {
         card.classList.add('hidden');
       }
     });
+  });
+});
+
+// Make entire card clickable
+document.querySelectorAll('.ps-card').forEach(card => {
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('.btn-playstore') || e.target.closest('.btn-install')) return;
+    const installBtn = card.querySelector('.btn-install');
+    if (installBtn && installBtn.href) {
+      window.location.href = installBtn.href;
+    }
   });
 });
 </script>
