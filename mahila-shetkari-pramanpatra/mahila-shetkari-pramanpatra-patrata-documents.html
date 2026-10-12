@@ -169,10 +169,16 @@ permalink: /mahila-shetkari-pramanpatra-documents-eligibility/
     font-size: 15.5px;
   }
 
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px 0 25px;
+  }
+
   .docs-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0 25px;
     font-size: 15px;
   }
 
@@ -190,6 +196,52 @@ permalink: /mahila-shetkari-pramanpatra-documents-eligibility/
 
   .docs-table tr:nth-child(even) {
     background: #fbfaf7;
+  }
+
+  @media (max-width: 600px) {
+    .art-card {
+      padding: 22px 16px;
+      border-radius: 16px;
+    }
+    .docs-table, .docs-table tbody, .docs-table tr, .docs-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .docs-table thead {
+      display: none;
+    }
+    .docs-table tr {
+      margin-bottom: 14px;
+      border: 1.5px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 12px;
+      background: #ffffff !important;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    }
+    .docs-table td {
+      padding: 8px 10px;
+      border: none;
+      font-size: 14px;
+    }
+    .docs-table td:first-child {
+      background: #f0fdf4;
+      border-radius: 8px;
+      color: var(--agri-dark);
+      font-size: 15px;
+      margin-bottom: 6px;
+      padding: 8px 10px;
+    }
+    .docs-table td:nth-child(2)::before {
+      content: "कोणासाठी: ";
+      font-weight: 700;
+      color: var(--agri-primary);
+    }
+    .docs-table td:nth-child(3)::before {
+      content: "तपशील: ";
+      font-weight: 700;
+      color: #64748b;
+    }
   }
 
   .app-banner-card {
@@ -305,52 +357,54 @@ permalink: /mahila-shetkari-pramanpatra-documents-eligibility/
       ऑनलाइन अर्ज भरण्यापूर्वी खालील कागदपत्रे तयार ठेवा. कागदपत्रांची स्पष्ट स्कॅन केलेली प्रत किंवा चांगल्या प्रकाशातील फोटो आवश्यक आहे:
     </p>
 
-    <table class="docs-table">
-      <thead>
-        <tr>
-          <th>कागदपत्राचे नाव</th>
-          <th>कोणासाठी आवश्यक?</th>
-          <th>तपशील / शेरा</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>आधार कार्ड (Aadhaar Card)</strong></td>
-          <td>सर्व अर्जदारांसाठी अनिवार्य</td>
-          <td>मोबाईल नंबरशी लिंक असणे आवश्यक</td>
-        </tr>
-        <tr>
-          <td><strong>७/१२ आणि ८-अ उतारा</strong></td>
-          <td>जमीन मालक महिलांसाठी</td>
-          <td>डिजिटल स्वाक्षरी असलेला चालू वर्षाचा उतारा</td>
-        </tr>
-        <tr>
-          <td><strong>स्वयंघोषणापत्र (Self-Declaration)</strong></td>
-          <td>सर्व अर्जदारांसाठी अनिवार्य</td>
-          <td>विहित नमुन्यात स्वाक्षरी किंवा अंगठ्याचा ठसा</td>
-        </tr>
-        <tr>
-          <td><strong>बँक पासबुक / कॅन्सल चेक</strong></td>
-          <td>सर्व अर्जदारांसाठी अनिवार्य</td>
-          <td>खाते क्रमांक व IFSC कोड स्पष्ट दिसणारा</td>
-        </tr>
-        <tr>
-          <td><strong>रेशन कार्ड (Ration Card)</strong></td>
-          <td>सर्व अर्जदारांसाठी</td>
-          <td>कुटुंब प्रमुख व सदस्यांचे नाव असणारे पान</td>
-        </tr>
-        <tr>
-          <td><strong>पासपोर्ट साईज रंगीत फोटो</strong></td>
-          <td>सर्व अर्जदारांसाठी</td>
-          <td>नुकताच काढलेला स्पष्ट फोटो (JPG/PNG)</td>
-        </tr>
-        <tr>
-          <td><strong>पशुधन / व्यवसाय पुरावा</strong></td>
-          <td>पशुपालन / दुग्ध व्यावसायिक महिलांसाठी</td>
-          <td>पशुवैद्यकीय अधिकाऱ्यांचे पत्र किंवा नोंद</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="docs-table">
+        <thead>
+          <tr>
+            <th>कागदपत्राचे नाव</th>
+            <th>कोणासाठी आवश्यक?</th>
+            <th>तपशील / शेरा</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>आधार कार्ड (Aadhaar Card)</strong></td>
+            <td>सर्व अर्जदारांसाठी अनिवार्य</td>
+            <td>मोबाईल नंबरशी लिंक असणे आवश्यक</td>
+          </tr>
+          <tr>
+            <td><strong>७/१२ आणि ८-अ उतारा</strong></td>
+            <td>जमीन मालक महिलांसाठी</td>
+            <td>डिजिटल स्वाक्षरी असलेला चालू वर्षाचा उतारा</td>
+          </tr>
+          <tr>
+            <td><strong>स्वयंघोषणापत्र (Self-Declaration)</strong></td>
+            <td>सर्व अर्जदारांसाठी अनिवार्य</td>
+            <td>विहित नमुन्यात स्वाक्षरी किंवा अंगठ्याचा ठसा</td>
+          </tr>
+          <tr>
+            <td><strong>बँक पासबुक / कॅन्सल चेक</strong></td>
+            <td>सर्व अर्जदारांसाठी अनिवार्य</td>
+            <td>खाते क्रमांक व IFSC कोड स्पष्ट दिसणारा</td>
+          </tr>
+          <tr>
+            <td><strong>रेशन कार्ड (Ration Card)</strong></td>
+            <td>सर्व अर्जदारांसाठी</td>
+            <td>कुटुंब प्रमुख व सदस्यांचे नाव असणारे पान</td>
+          </tr>
+          <tr>
+            <td><strong>पासपोर्ट साईज रंगीत फोटो</strong></td>
+            <td>सर्व अर्जदारांसाठी</td>
+            <td>नुकताच काढलेला स्पष्ट फोटो (JPG/PNG)</td>
+          </tr>
+          <tr>
+            <td><strong>पशुधन / व्यवसाय पुरावा</strong></td>
+            <td>पशुपालन / दुग्ध व्यावसायिक महिलांसाठी</td>
+            <td>पशुवैद्यकीय अधिकाऱ्यांचे पत्र किंवा नोंद</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <h2>स्वयंघोषणापत्राचा (Self-Declaration) नमुना कसा असावा?</h2>
     <p>

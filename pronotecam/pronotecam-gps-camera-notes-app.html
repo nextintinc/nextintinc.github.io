@@ -653,16 +653,26 @@ permalink: /pronotecam-gps-camera-notes-app/
   }
 
   /* ── COMPARISON TABLE ── */
+  .pnc-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px 0 25px;
+  }
+
   .pnc-comp-table {
     width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0 25px;
+    border-collapse: separate;
+    border-spacing: 0;
     font-size: 14.5px;
+    border: 1px solid var(--pnc-border);
+    border-radius: 14px;
+    overflow: hidden;
   }
 
   .pnc-comp-table th, .pnc-comp-table td {
     padding: 14px 16px;
-    border: 1px solid var(--pnc-border);
+    border-bottom: 1px solid var(--pnc-border);
     text-align: left;
   }
 
@@ -672,8 +682,108 @@ permalink: /pronotecam-gps-camera-notes-app/
     font-weight: 700;
   }
 
-  .pnc-comp-table tr:nth-child(even) {
+  .pnc-comp-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .pnc-comp-table tr:nth-child(even) td {
     background: #f8fafc;
+  }
+
+  @media (max-width: 680px) {
+    .pnc-card {
+      padding: 24px 16px;
+      border-radius: 16px;
+    }
+
+    .pnc-table-responsive {
+      overflow: visible;
+      margin: 15px 0 20px;
+    }
+
+    .pnc-comp-table {
+      border: none;
+      background: transparent;
+    }
+
+    .pnc-comp-table thead {
+      display: none;
+    }
+
+    .pnc-comp-table, 
+    .pnc-comp-table tbody, 
+    .pnc-comp-table tr, 
+    .pnc-comp-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .pnc-comp-table tr {
+      margin-bottom: 16px;
+      background: #ffffff !important;
+      border: 1.5px solid #bae6fd;
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.06);
+    }
+
+    .pnc-comp-table td {
+      padding: 10px 12px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+
+    .pnc-comp-table td:last-child {
+      margin-bottom: 0;
+    }
+
+    .pnc-comp-table td[data-label="Feature"] {
+      background: #f0f9ff !important;
+      color: var(--pnc-navy);
+      font-size: 15px;
+      font-weight: 700;
+      border-left: 4px solid var(--pnc-blue);
+      margin-bottom: 10px;
+      padding: 9px 12px;
+    }
+
+    .pnc-comp-table td[data-label="Standard Camera"] {
+      background: #fef2f2 !important;
+      color: #991b1b;
+      border-left: 4px solid #ef4444;
+    }
+
+    .pnc-comp-table td[data-label="Standard Camera"]::before {
+      content: "Standard Phone Camera";
+      display: block;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #dc2626;
+      margin-bottom: 3px;
+    }
+
+    .pnc-comp-table td[data-label="ProNoteCam"] {
+      background: #f0fdf4 !important;
+      color: #166534;
+      border-left: 4px solid #22c55e;
+    }
+
+    .pnc-comp-table td[data-label="ProNoteCam"]::before {
+      content: "ProNoteCam: GPS Camera";
+      display: block;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #16a34a;
+      margin-bottom: 3px;
+    }
   }
 
   /* ── FAQ ACCORDION ── */
@@ -1025,47 +1135,49 @@ permalink: /pronotecam-gps-camera-notes-app/
     <h2><span>⚖️</span> Standard Phone Camera vs. ProNoteCam</h2>
     <p>See why professionals switch to ProNoteCam for their field documentation needs:</p>
 
-    <table class="pnc-comp-table">
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Standard Phone Camera</th>
-          <th>ProNoteCam: GPS Camera</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Visible GPS Coordinates</strong></td>
-          <td>❌ Hidden in EXIF (not visible on photo)</td>
-          <td>✅ Clear visual overlay (Lat / Long)</td>
-        </tr>
-        <tr>
-          <td><strong>Elevation / Altitude</strong></td>
-          <td>❌ Rarely recorded</td>
-          <td>✅ Stamped on image in meters / feet</td>
-        </tr>
-        <tr>
-          <td><strong>Custom Text Notes</strong></td>
-          <td>❌ None (requires external photo editor)</td>
-          <td>✅ Direct site notes on the photo before save</td>
-        </tr>
-        <tr>
-          <td><strong>Visual Timestamp</strong></td>
-          <td>❌ Requires photo gallery inspection</td>
-          <td>✅ Unalterable date &amp; time watermark</td>
-        </tr>
-        <tr>
-          <td><strong>Date-Organized Journal</strong></td>
-          <td>❌ Mixed with personal selfies/memes</td>
-          <td>✅ Dedicated work photo journal grouped by date</td>
-        </tr>
-        <tr>
-          <td><strong>Account &amp; Internet Requirement</strong></td>
-          <td>⚠️ Often syncs to cloud automatically</td>
-          <td>✅ 100% Offline &amp; No account required</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="pnc-table-responsive">
+      <table class="pnc-comp-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Standard Phone Camera</th>
+            <th>ProNoteCam: GPS Camera</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Feature"><strong>Visible GPS Coordinates</strong></td>
+            <td data-label="Standard Camera">❌ Hidden in EXIF (not visible on photo)</td>
+            <td data-label="ProNoteCam">✅ Clear visual overlay (Lat / Long)</td>
+          </tr>
+          <tr>
+            <td data-label="Feature"><strong>Elevation / Altitude</strong></td>
+            <td data-label="Standard Camera">❌ Rarely recorded</td>
+            <td data-label="ProNoteCam">✅ Stamped on image in meters / feet</td>
+          </tr>
+          <tr>
+            <td data-label="Feature"><strong>Custom Text Notes</strong></td>
+            <td data-label="Standard Camera">❌ None (requires external photo editor)</td>
+            <td data-label="ProNoteCam">✅ Direct site notes on the photo before save</td>
+          </tr>
+          <tr>
+            <td data-label="Feature"><strong>Visual Timestamp</strong></td>
+            <td data-label="Standard Camera">❌ Requires photo gallery inspection</td>
+            <td data-label="ProNoteCam">✅ Unalterable date &amp; time watermark</td>
+          </tr>
+          <tr>
+            <td data-label="Feature"><strong>Date-Organized Journal</strong></td>
+            <td data-label="Standard Camera">❌ Mixed with personal selfies/memes</td>
+            <td data-label="ProNoteCam">✅ Dedicated work photo journal grouped by date</td>
+          </tr>
+          <tr>
+            <td data-label="Feature"><strong>Account &amp; Internet Requirement</strong></td>
+            <td data-label="Standard Camera">⚠️ Often syncs to cloud automatically</td>
+            <td data-label="ProNoteCam">✅ 100% Offline &amp; No account required</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <!-- FAQ SECTION -->
