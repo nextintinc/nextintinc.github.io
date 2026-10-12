@@ -1,0 +1,1184 @@
+---
+layout: default
+title: "ProNoteCam: GPS Camera & Notes App – Geotag Photos, Timestamp & Field Notes (2026)"
+description: "Download ProNoteCam – Professional GPS Camera with location coordinates (Lat/Long), elevation, timestamp, and custom notes. Best geotag camera app for engineers, surveyors, real estate & fieldwork. Free Android app by NextInt Inc."
+permalink: /pronotecam-gps-camera-notes-app/
+---
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="ProNoteCam: GPS Camera & Notes App – Geotag Photos, Timestamp & Field Notes (2026)">
+<meta property="og:description" content="Capture photos with GPS location coordinates, elevation, timestamp, and custom notes. Perfect for construction, real estate, survey, and fieldwork. Free Android app.">
+<meta property="og:url" content="https://nextintinc.in/pronotecam-gps-camera-notes-app/">
+<meta property="og:image" content="https://nextintinc.in/assets/icons/pronotecam.png">
+<meta property="og:site_name" content="NextInt Inc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ProNoteCam: GPS Camera & Notes App 2026">
+<meta name="twitter:description" content="Professional GPS Camera with location coordinates, altitude, timestamp & custom notes. Free on Google Play.">
+<meta name="twitter:image" content="https://nextintinc.in/assets/icons/pronotecam.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "ProNoteCam: GPS Camera & Notes",
+  "alternateName": ["ProNoteCam", "GPS Camera with Timestamp and Notes", "Geotag Photo Camera App"],
+  "applicationCategory": "PhotographyApplication",
+  "operatingSystem": "ANDROID",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "420"
+  },
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.nextintinc.pronotecam",
+  "author": {
+    "@type": "Organization",
+    "name": "NextInt Inc",
+    "url": "https://nextintinc.in/"
+  },
+  "description": "Capture photos with GPS location, date, time, and custom notes using ProNoteCam. Simple, professional GPS camera for field workers, engineers, surveyors, real estate agents, and travelers."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is ProNoteCam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ProNoteCam is a professional GPS camera Android application that automatically stamps geographical coordinates (latitude and longitude), elevation (altitude), location accuracy, date, time, and custom user notes directly onto photos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ProNoteCam work offline without an internet connection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! ProNoteCam captures photos with timestamps and custom notes completely offline. The device's built-in GPS sensor provides coordinates and altitude even in remote areas without cellular data or Wi-Fi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who should use ProNoteCam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ProNoteCam is engineered for civil engineers, construction contractors, land surveyors, real estate appraisers, insurance inspectors, delivery agents, agricultural researchers, and outdoor travelers who need verifiable proof and detailed photo documentation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my photos uploaded to any server or cloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ProNoteCam is strictly privacy-first. All captured photos and GPS data remain stored locally on your device storage. No account is required, and your data is never uploaded to any external server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add custom notes and project details to photos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can write custom notes, site names, inspection remarks, unit numbers, or project codes before capturing or saving. You can also quickly reuse frequently saved notes."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nextintinc.in/" },
+    { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://nextintinc.in/#apps" },
+    { "@type": "ListItem", "position": 3, "name": "ProNoteCam: GPS Camera & Notes", "item": "https://nextintinc.in/pronotecam-gps-camera-notes-app/" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --pnc-navy: #091322;
+    --pnc-dark: #0f1e36;
+    --pnc-blue: #0284c7;
+    --pnc-sky: #0ea5e9;
+    --pnc-cyan: #38bdf8;
+    --pnc-light-blue: #f0f9ff;
+    --pnc-accent: #f59e0b;
+    --pnc-surface: #ffffff;
+    --pnc-bg: #f8fafc;
+    --pnc-text: #0f172a;
+    --pnc-muted: #64748b;
+    --pnc-border: #e2e8f0;
+    --pnc-shadow: 0 12px 35px rgba(2, 132, 199, 0.08);
+  }
+
+  body {
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--pnc-bg);
+    color: var(--pnc-text);
+    line-height: 1.75;
+    font-size: 16px;
+  }
+
+  /* ── HERO BANNER ── */
+  .pnc-hero {
+    background: linear-gradient(145deg, #071120 0%, #0d213f 50%, #0284c7 100%);
+    color: #ffffff;
+    padding: 75px 20px 90px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pnc-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 18% 25%, rgba(56, 189, 248, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 82% 75%, rgba(245, 158, 11, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .pnc-hero-bg-icon {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 180px;
+    opacity: 0.04;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .pnc-hero-bg-icon-left {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    font-size: 140px;
+    opacity: 0.03;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .pnc-breadcrumb {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .pnc-breadcrumb a {
+    color: #7dd3fc;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .pnc-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .pnc-breadcrumb span {
+    margin: 0 8px;
+    opacity: 0.6;
+  }
+
+  .pnc-hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .pnc-hero h1 {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(28px, 4.8vw, 48px);
+    font-weight: 700;
+    line-height: 1.25;
+    max-width: 880px;
+    margin: 0 auto 18px;
+    position: relative;
+    z-index: 2;
+    letter-spacing: -0.02em;
+  }
+
+  .pnc-hero h1 span {
+    color: #38bdf8;
+    text-shadow: 0 2px 14px rgba(56, 189, 248, 0.3);
+  }
+
+  .pnc-hero-sub {
+    font-size: clamp(15px, 2.2vw, 18px);
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 740px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+  }
+
+  .pnc-hero-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .pnc-hero-tag {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #e0f2fe;
+  }
+
+  /* ── FLOATING APP CARD ── */
+  .pnc-card-wrapper {
+    max-width: 840px;
+    margin: -50px auto 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .pnc-app-card {
+    background: var(--pnc-surface);
+    border-radius: 24px;
+    border: 2px solid #bae6fd;
+    box-shadow: 0 16px 40px rgba(2, 132, 199, 0.12);
+    padding: 28px;
+    display: grid;
+    grid-template-columns: 110px 1fr auto;
+    gap: 24px;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .pnc-app-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px rgba(2, 132, 199, 0.18);
+  }
+
+  .pnc-app-icon {
+    width: 110px;
+    height: 110px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(2, 132, 199, 0.2);
+    border: 3px solid #e0f2fe;
+    background: #f0f9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pnc-app-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .pnc-app-meta h2 {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--pnc-navy);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  .pnc-app-meta .byline {
+    font-size: 13.5px;
+    color: var(--pnc-muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .pnc-app-meta .byline strong {
+    color: var(--pnc-blue);
+  }
+
+  .pnc-rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    background: #f1f5f9;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-right: 8px;
+  }
+
+  .pnc-rating-stars {
+    color: #eab308;
+    font-size: 13px;
+  }
+
+  .pnc-app-card-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .pnc-btn-playstore {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 13px 26px;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(2, 132, 199, 0.35);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .pnc-btn-playstore:hover {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(2, 132, 199, 0.45);
+  }
+
+  .pnc-btn-playstore i {
+    font-size: 18px;
+  }
+
+  .pnc-badge-free {
+    font-size: 12px;
+    color: var(--pnc-muted);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .pnc-app-card {
+      grid-template-columns: 80px 1fr;
+      gap: 16px;
+      padding: 20px;
+    }
+    .pnc-app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+    }
+    .pnc-app-card-cta {
+      grid-column: 1 / -1;
+      align-items: stretch;
+      margin-top: 4px;
+    }
+    .pnc-btn-playstore {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  /* ── HD SCREENSHOT GALLERY ── */
+  .pnc-gallery-section {
+    padding: 50px 0 40px;
+    background: linear-gradient(180deg, #f0f9ff 0%, var(--pnc-bg) 100%);
+    border-top: 1px solid #e0f2fe;
+    border-bottom: 1px solid #e0f2fe;
+    margin: 40px 0;
+  }
+
+  .pnc-section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+  }
+
+  .pnc-section-tag {
+    display: inline-block;
+    background: #e0f2fe;
+    color: var(--pnc-blue);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .pnc-section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(24px, 3.5vw, 36px);
+    font-weight: 700;
+    color: var(--pnc-navy);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .pnc-section-desc {
+    font-size: 15px;
+    color: var(--pnc-muted);
+  }
+
+  .pnc-gallery-scroll {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding: 10px 24px 25px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--pnc-sky) #e2e8f0;
+  }
+
+  .pnc-gallery-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .pnc-gallery-scroll::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 4px;
+  }
+
+  .pnc-gallery-scroll::-webkit-scrollbar-thumb {
+    background: var(--pnc-sky);
+    border-radius: 4px;
+  }
+
+  .pnc-screenshot-item {
+    flex: 0 0 240px;
+    scroll-snap-align: center;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(15, 30, 54, 0.1);
+    border: 2px solid #bae6fd;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .pnc-screenshot-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(2, 132, 199, 0.2);
+  }
+
+  .pnc-screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 9 / 19.5;
+    object-fit: cover;
+  }
+
+  .pnc-screenshot-caption {
+    padding: 10px 12px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--pnc-navy);
+    text-align: center;
+    background: #ffffff;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  /* ── MAIN CONTENT CONTAINER ── */
+  .pnc-content-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+  }
+
+  /* ── CONTENT CARDS ── */
+  .pnc-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid var(--pnc-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    padding: 34px;
+    margin-bottom: 35px;
+    transition: border-color 0.2s;
+  }
+
+  .pnc-card:hover {
+    border-color: #7dd3fc;
+  }
+
+  .pnc-card h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(21px, 2.8vw, 28px);
+    font-weight: 700;
+    color: var(--pnc-navy);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 1.35;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 14px;
+  }
+
+  .pnc-card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--pnc-blue);
+    margin: 24px 0 12px;
+  }
+
+  .pnc-card p {
+    color: #334155;
+    margin-bottom: 16px;
+    line-height: 1.85;
+    font-size: 15.5px;
+  }
+
+  .pnc-card strong {
+    color: #0f172a;
+  }
+
+  /* ── FEATURES GRID ── */
+  .pnc-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin: 25px 0 10px;
+  }
+
+  .pnc-feature-card {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px;
+    transition: transform 0.2s, border-color 0.2s, background 0.2s;
+  }
+
+  .pnc-feature-card:hover {
+    border-color: var(--pnc-sky);
+    transform: translateY(-3px);
+    background: #ffffff;
+  }
+
+  .pnc-f-icon {
+    width: 48px;
+    height: 48px;
+    background: #e0f2fe;
+    color: var(--pnc-blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .pnc-feature-card h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--pnc-navy);
+    margin-bottom: 8px;
+  }
+
+  .pnc-feature-card p {
+    font-size: 13.5px;
+    color: var(--pnc-muted);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  /* ── WHO USES GRID ── */
+  .pnc-users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .pnc-user-box {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 18px 16px;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+
+  .pnc-user-box:hover {
+    background: #f0f9ff;
+    border-color: #7dd3fc;
+    transform: translateY(-3px);
+  }
+
+  .pnc-user-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .pnc-user-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--pnc-navy);
+    margin-bottom: 4px;
+  }
+
+  .pnc-user-desc {
+    font-size: 12.5px;
+    color: var(--pnc-muted);
+    line-height: 1.5;
+  }
+
+  /* ── COMPARISON TABLE ── */
+  .pnc-comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 25px;
+    font-size: 14.5px;
+  }
+
+  .pnc-comp-table th, .pnc-comp-table td {
+    padding: 14px 16px;
+    border: 1px solid var(--pnc-border);
+    text-align: left;
+  }
+
+  .pnc-comp-table th {
+    background: #f0f9ff;
+    color: var(--pnc-navy);
+    font-weight: 700;
+  }
+
+  .pnc-comp-table tr:nth-child(even) {
+    background: #f8fafc;
+  }
+
+  /* ── FAQ ACCORDION ── */
+  .pnc-faq-item {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .pnc-faq-q {
+    padding: 18px 22px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--pnc-navy);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: background 0.2s;
+  }
+
+  .pnc-faq-q:hover {
+    background: #f8fafc;
+  }
+
+  .pnc-faq-q i {
+    transition: transform 0.25s ease;
+    color: var(--pnc-blue);
+  }
+
+  .pnc-faq-a {
+    padding: 0 22px 18px;
+    color: #475569;
+    font-size: 14.5px;
+    line-height: 1.75;
+  }
+
+  /* ── ARTICLES GRID ── */
+  .pnc-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin: 25px 0 10px;
+  }
+
+  .pnc-art-card {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+  }
+
+  .pnc-art-card:hover {
+    border-color: var(--pnc-sky);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(2, 132, 199, 0.12);
+  }
+
+  .pnc-art-tag {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--pnc-blue);
+    background: #e0f2fe;
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+
+  .pnc-art-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--pnc-navy);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .pnc-art-card p {
+    font-size: 13px;
+    color: var(--pnc-muted);
+    line-height: 1.6;
+    margin-bottom: 14px;
+    flex-grow: 1;
+  }
+
+  .pnc-art-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--pnc-blue);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ── BOTTOM CTA ── */
+  .pnc-bottom-cta {
+    background: linear-gradient(145deg, #071120 0%, #0284c7 100%);
+    color: #ffffff;
+    border-radius: 24px;
+    padding: 45px 30px;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pnc-bottom-cta h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(24px, 3.5vw, 34px);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .pnc-bottom-cta p {
+    font-size: 15.5px;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 600px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+  }
+</style>
+
+<!-- ================= HERO ================= -->
+<header class="pnc-hero">
+  <div class="pnc-hero-bg-icon">📸</div>
+  <div class="pnc-hero-bg-icon-left">📍</div>
+
+  <nav class="pnc-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ site.url }}/">Home</a>
+    <span>›</span>
+    <a href="{{ site.url }}/#apps">Apps</a>
+    <span>›</span>
+    <span>ProNoteCam: GPS Camera & Notes</span>
+  </nav>
+
+  <div class="pnc-hero-pill">
+    <span>📍</span>
+    <span>Professional GPS Geotagging & Timestamp Camera</span>
+  </div>
+
+  <h1>ProNoteCam: <span>GPS Camera & Notes</span></h1>
+  
+  <p class="pnc-hero-sub">
+    Capture high-resolution photos with real-time GPS coordinates, elevation, timestamp, and customizable text notes. Built for field engineers, land surveyors, inspectors, real estate agents, and explorers.
+  </p>
+
+  <div class="pnc-hero-tags">
+    <div class="pnc-hero-tag">📍 Latitude &amp; Longitude</div>
+    <div class="pnc-hero-tag">⛰ Elevation / Altitude</div>
+    <div class="pnc-hero-tag">📝 Custom Photo Notes</div>
+    <div class="pnc-hero-tag">⏰ Date &amp; Timestamp</div>
+    <div class="pnc-hero-tag">📁 Date-Based Gallery</div>
+    <div class="pnc-hero-tag">🔒 100% Private &amp; Offline</div>
+  </div>
+</header>
+
+<!-- ================= APP CARD ================= -->
+<div class="pnc-card-wrapper">
+  <div class="pnc-app-card">
+    <div class="pnc-app-icon">
+      <img src="https://play-lh.googleusercontent.com/IVLMXzzyyaFX8oNlBVJKcfdB43sf4nueoUMA6R6IARW-0LzRnlX2PHZNr3jz8Q8u1h24twrt7WByNXbA16GlFg=s512-rw" alt="ProNoteCam App Icon" width="110" height="110">
+    </div>
+
+    <div class="pnc-app-meta">
+      <h2>ProNoteCam: GPS Camera & Notes</h2>
+      <div class="byline">Developer: <strong>NextInt Inc</strong> (Vijay Sonawale) &nbsp;·&nbsp; Photography &amp; Productivity</div>
+      <div>
+        <span class="pnc-rating-pill">
+          <span class="pnc-rating-stars">★★★★★</span> 4.9
+        </span>
+        <span class="pnc-badge-free">Free Android App &nbsp;·&nbsp; No Login Required</span>
+      </div>
+    </div>
+
+    <div class="pnc-app-card-cta">
+      <a href="https://play.google.com/store/apps/details?id=com.nextintinc.pronotecam" target="_blank" rel="noopener" class="pnc-btn-playstore" title="Install ProNoteCam from Google Play Store">
+        <i class="fab fa-google-play"></i>
+        <span>Install On Google Play</span>
+      </a>
+      <span class="pnc-badge-free">Google Play Verified &nbsp;·&nbsp; 100% Offline Capable</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HD SCREENSHOT GALLERY ================= -->
+<section class="pnc-gallery-section" id="screenshots">
+  <div class="pnc-section-header">
+    <div class="pnc-section-tag">📸 App Interface</div>
+    <h2 class="pnc-section-title">See ProNoteCam in Action</h2>
+    <p class="pnc-section-desc">Explore the live camera interface, geotag overlays, note customization, and date-organized gallery.</p>
+  </div>
+
+  <div class="pnc-gallery-scroll">
+    <div class="pnc-screenshot-item">
+      <img src="https://play-lh.googleusercontent.com/uXPZ4WB77oCvxy5TU0FNVe9jHj7ldiOI_Ez-vCgxZ8RmiEjU9ZkhX9yBgpS_VZbnqiiPrnVN3d4saNwAUWNXR64=s2560-rw" alt="ProNoteCam Camera Live View with GPS Overlay" loading="lazy">
+      <div class="pnc-screenshot-caption">1. GPS Camera &amp; Live Coordinates</div>
+    </div>
+    <div class="pnc-screenshot-item">
+      <img src="https://play-lh.googleusercontent.com/eAJGRVu0MBBNp3LPh8xSgCSOWcLu3Zei-tGBYPivdYhEa22cqbXFWY7nSbiduoXMScX2Xj_9w0dG-F3M1QfgyJ4=s2560-rw" alt="Custom Photo Notes and Descriptions" loading="lazy">
+      <div class="pnc-screenshot-caption">2. Add Custom Notes &amp; Site Names</div>
+    </div>
+    <div class="pnc-screenshot-item">
+      <img src="https://play-lh.googleusercontent.com/DS-8ik9wQjdv_MKKZ5hiHyhxX2aaORZcfp3ki5eSQXFwUofn-ET8auWf9ZjKzLjrmAB4H8rQUWhNi25BjMnM=s2560-rw" alt="Date and Time Timestamping" loading="lazy">
+      <div class="pnc-screenshot-caption">3. Timestamp &amp; Elevation Details</div>
+    </div>
+    <div class="pnc-screenshot-item">
+      <img src="https://play-lh.googleusercontent.com/NZqURPSZT2E_hjRgdtxYCnPe-S7Yyj4mJNEC654YwUAA3dWdrfragUk65ZESJZwhggndN28w8J0SwWyswVmp1w=s2560-rw" alt="Photo Journal & Date Grouped Gallery" loading="lazy">
+      <div class="pnc-screenshot-caption">4. Photo Journal &amp; Date Organization</div>
+    </div>
+    <div class="pnc-screenshot-item">
+      <img src="https://play-lh.googleusercontent.com/IFEk4WmrEqws7y_BxWvs-jTi7T4EFN7UroqHSJ7griC2H3DyBFN4Z4codHiuJfxbTYa0MucCg35Ft2UVB7kXl8M=s2560-rw" alt="Instant Share & Export GPS Photos" loading="lazy">
+      <div class="pnc-screenshot-caption">5. Instant Preview, Share &amp; Export</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="pnc-content-wrapper">
+
+  <!-- OVERVIEW CARD -->
+  <article class="pnc-card" id="overview">
+    <h2><span>📸</span> Turn Every Photo into Verifiable Field Proof</h2>
+    <p>
+      Standard smartphone cameras capture beautiful images, but they lack the crucial metadata needed for professional documentation: exact geographic coordinates, elevation above sea level, location accuracy, exact timestamp, and contextual site notes.
+    </p>
+    <p>
+      <strong>ProNoteCam</strong> solves this problem completely. Whether you are inspecting a structural beam on a high-rise construction site, conducting a boundary survey for real estate property, documenting an insurance claim, or recording fieldwork for environmental studies, ProNoteCam overlays all necessary GPS data and custom remarks directly onto your picture.
+    </p>
+    <p>
+      Best of all, ProNoteCam is engineered with an <strong>offline-first and privacy-focused</strong> architecture. You don't need to sign up, create an account, or have an active internet connection to stamp coordinates on your photos.
+    </p>
+  </article>
+
+  <!-- FEATURES BREAKDOWN -->
+  <section class="pnc-card" id="features">
+    <h2><span>⚡</span> Core Features of ProNoteCam</h2>
+    <p>
+      Designed from the ground up to be lightweight, lightning-fast, and packed with professional utilities:
+    </p>
+
+    <div class="pnc-features-grid">
+      <div class="pnc-feature-card">
+        <div class="pnc-f-icon"><i class="fa fa-map-marker-alt"></i></div>
+        <h4>GPS Location Stamping</h4>
+        <p>Real-time Latitude, Longitude, Elevation (altitude), and GPS sensor accuracy embedded directly onto the photo.</p>
+      </div>
+
+      <div class="pnc-feature-card">
+        <div class="pnc-f-icon"><i class="fa fa-edit"></i></div>
+        <h4>Custom Field Notes</h4>
+        <p>Type custom observations, project codes, client names, or inspection findings. Quickly reuse recently typed notes.</p>
+      </div>
+
+      <div class="pnc-feature-card">
+        <div class="pnc-f-icon"><i class="fa fa-clock"></i></div>
+        <h4>Date &amp; Time Watermarking</h4>
+        <p>Indelible local date and time stamps ensure transparent, timestamped evidence for job site daily progress logs.</p>
+      </div>
+
+      <div class="pnc-feature-card">
+        <div class="pnc-f-icon"><i class="fa fa-images"></i></div>
+        <h4>Organized Photo Journal</h4>
+        <p>Automatic timeline grouping by capture date keeps hundreds of site inspection photos structured and easily browsable.</p>
+      </div>
+
+      <div class="pnc-feature-card">
+        <div class="pnc-f-icon"><i class="fa fa-wifi-slash"></i></div>
+        <h4>100% Offline Capability</h4>
+        <p>Works in remote locations, basements, and mountain areas without cell reception or internet connectivity.</p>
+      </div>
+
+      <div class="pnc-feature-card">
+        <div class="pnc-f-icon"><i class="fa fa-shield-alt"></i></div>
+        <h4>Zero Data Collection</h4>
+        <p>No login or tracking. Photos and location coordinates are stored entirely on your device unless you share them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO CAN USE PRONOTECAM -->
+  <section class="pnc-card" id="industries">
+    <h2><span>👷</span> Who Relies on ProNoteCam?</h2>
+    <p>
+      Thousands of professionals across diverse industries depend on ProNoteCam for daily field proof and verified reporting:
+    </p>
+
+    <div class="pnc-users-grid">
+      <div class="pnc-user-box">
+        <span class="pnc-user-icon">🏗️</span>
+        <div class="pnc-user-title">Civil Engineers</div>
+        <div class="pnc-user-desc">Record daily construction progress, slab casting, and contractor work proof.</div>
+      </div>
+
+      <div class="pnc-user-box">
+        <span class="pnc-user-icon">📐</span>
+        <div class="pnc-user-title">Land Surveyors</div>
+        <div class="pnc-user-desc">Capture property boundaries with verified latitude, longitude, and elevation.</div>
+      </div>
+
+      <div class="pnc-user-box">
+        <span class="pnc-user-icon">🏠</span>
+        <div class="pnc-user-title">Real Estate Agents</div>
+        <div class="pnc-user-desc">Document property appraisals, land plots, and development milestones.</div>
+      </div>
+
+      <div class="pnc-user-box">
+        <span class="pnc-user-icon">📋</span>
+        <div class="pnc-user-title">Quality Inspectors</div>
+        <div class="pnc-user-desc">Provide non-repudiable audit evidence for safety and quality compliance.</div>
+      </div>
+
+      <div class="pnc-user-box">
+        <span class="pnc-user-icon">🚚</span>
+        <div class="pnc-user-title">Logistics &amp; Delivery</div>
+        <div class="pnc-user-desc">Proof of delivery (POD) with exact location and doorstep time verification.</div>
+      </div>
+
+      <div class="pnc-user-box">
+        <span class="pnc-user-icon">🌾</span>
+        <div class="pnc-user-title">Agriculture &amp; Forestry</div>
+        <div class="pnc-user-desc">Record crop surveys, irrigation lines, soil tests, and farmland acreage.</div>
+      </div>
+
+      <div class="pnc-user-box">
+        <span class="pnc-user-icon">⚡</span>
+        <div class="pnc-user-title">Utility &amp; Telecom</div>
+        <div class="pnc-user-desc">Asset mapping for cell towers, electrical transformers, and water pipelines.</div>
+      </div>
+
+      <div class="pnc-user-box">
+        <span class="pnc-user-icon">🌍</span>
+        <div class="pnc-user-title">Explorers &amp; Hikers</div>
+        <div class="pnc-user-desc">Preserve travel memories with accurate coordinates, elevation, and personal notes.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="pnc-card" id="comparison">
+    <h2><span>⚖️</span> Standard Phone Camera vs. ProNoteCam</h2>
+    <p>See why professionals switch to ProNoteCam for their field documentation needs:</p>
+
+    <table class="pnc-comp-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Standard Phone Camera</th>
+          <th>ProNoteCam: GPS Camera</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Visible GPS Coordinates</strong></td>
+          <td>❌ Hidden in EXIF (not visible on photo)</td>
+          <td>✅ Clear visual overlay (Lat / Long)</td>
+        </tr>
+        <tr>
+          <td><strong>Elevation / Altitude</strong></td>
+          <td>❌ Rarely recorded</td>
+          <td>✅ Stamped on image in meters / feet</td>
+        </tr>
+        <tr>
+          <td><strong>Custom Text Notes</strong></td>
+          <td>❌ None (requires external photo editor)</td>
+          <td>✅ Direct site notes on the photo before save</td>
+        </tr>
+        <tr>
+          <td><strong>Visual Timestamp</strong></td>
+          <td>❌ Requires photo gallery inspection</td>
+          <td>✅ Unalterable date &amp; time watermark</td>
+        </tr>
+        <tr>
+          <td><strong>Date-Organized Journal</strong></td>
+          <td>❌ Mixed with personal selfies/memes</td>
+          <td>✅ Dedicated work photo journal grouped by date</td>
+        </tr>
+        <tr>
+          <td><strong>Account &amp; Internet Requirement</strong></td>
+          <td>⚠️ Often syncs to cloud automatically</td>
+          <td>✅ 100% Offline &amp; No account required</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="pnc-card" id="faqs">
+    <h2><span>❓</span> Frequently Asked Questions (FAQ)</h2>
+
+    <div class="pnc-faq-item">
+      <div class="pnc-faq-q" onclick="togglePncFaq(this)">
+        <span>How accurate is the GPS coordinate stamping in ProNoteCam?</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+      <div class="pnc-faq-a">
+        ProNoteCam utilizes your Android device's high-precision GNSS/GPS chipset. Accuracy typically ranges from 2 to 5 meters under clear skies. ProNoteCam also displays the real-time accuracy metric on the viewfinder so you know when the GPS fix is optimal before snapping the picture.
+      </div>
+    </div>
+
+    <div class="pnc-faq-item">
+      <div class="pnc-faq-q" onclick="togglePncFaq(this)">
+        <span>Can I reuse notes I frequently use for different inspections?</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+      <div class="pnc-faq-a">
+        Yes! ProNoteCam saves your recent notes so you can quickly apply frequent tags like "Foundational Inspection", "Pavement Survey", or "Client Unit #402" without having to retype them every single time.
+      </div>
+    </div>
+
+    <div class="pnc-faq-item">
+      <div class="pnc-faq-q" onclick="togglePncFaq(this)">
+        <span>Does ProNoteCam require internet access to stamp coordinates?</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+      <div class="pnc-faq-a">
+        No! Satellite GPS signals operate independently of mobile data and Wi-Fi. ProNoteCam can capture, stamp, and organize your geotagged photos even in airplane mode or in remote mountain terrains.
+      </div>
+    </div>
+
+    <div class="pnc-faq-item">
+      <div class="pnc-faq-q" onclick="togglePncFaq(this)">
+        <span>Is ProNoteCam free to download and use?</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+      <div class="pnc-faq-a">
+        Yes, ProNoteCam is completely free to install and use on Android devices directly from the Google Play Store with no hidden sign-up fees or subscription paywalls.
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED ARTICLES -->
+  <section class="pnc-card" id="guides">
+    <h2><span>📚</span> Guides &amp; Industry Tutorials</h2>
+    <p>Read our specialized articles on geotagging, surveying, and field reporting:</p>
+
+    <div class="pnc-articles-grid">
+      <a href="{{ site.url }}/gps-camera-construction-site-documentation/" class="pnc-art-card">
+        <span class="pnc-art-tag">Construction</span>
+        <h4>GPS Camera for Construction Site Progress Reports</h4>
+        <p>How civil engineers use timestamped geotag photos to track contractor milestones and prevent disputes.</p>
+        <div class="pnc-art-link">Read Guide <i class="fa fa-arrow-right"></i></div>
+      </a>
+
+      <a href="{{ site.url }}/geotag-photos-real-estate-land-surveying/" class="pnc-art-card">
+        <span class="pnc-art-tag">Real Estate</span>
+        <h4>Geotagging Photos for Real Estate &amp; Land Surveying</h4>
+        <p>Complete guide to capturing latitude, longitude, and altitude for property valuations and boundary records.</p>
+        <div class="pnc-art-link">Read Guide <i class="fa fa-arrow-right"></i></div>
+      </a>
+
+      <a href="{{ site.url }}/best-gps-camera-apps-notes-timestamp/" class="pnc-art-card">
+        <span class="pnc-art-tag">App Review</span>
+        <h4>Best GPS Camera Apps with Notes &amp; Timestamps (2026)</h4>
+        <p>Comparing top geotag camera tools for Android — feature comparison, offline capability, and note utilities.</p>
+        <div class="pnc-art-link">Read Guide <i class="fa fa-arrow-right"></i></div>
+      </a>
+
+      <a href="{{ site.url }}/offline-gps-camera-fieldwork-remote-locations/" class="pnc-art-card">
+        <span class="pnc-art-tag">Fieldwork</span>
+        <h4>Capturing Geotagged Photos Offline in Remote Locations</h4>
+        <p>How satellite GNSS positioning works without cellular network and tips for maximizing GPS accuracy in the field.</p>
+        <div class="pnc-art-link">Read Guide <i class="fa fa-arrow-right"></i></div>
+      </a>
+
+      <a href="{{ site.url }}/photo-timestamp-watermark-legal-compliance/" class="pnc-art-card">
+        <span class="pnc-art-tag">Compliance</span>
+        <h4>Why Date, Time &amp; GPS Watermarks are Crucial for Audits</h4>
+        <p>How visual watermarks protect contractors and inspectors during regulatory audits and insurance claims.</p>
+        <div class="pnc-art-link">Read Guide <i class="fa fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- BOTTOM DOWNLOAD BANNER -->
+  <div class="pnc-bottom-cta">
+    <h3>Upgrade Your Field Photo Documentation Today</h3>
+    <p>Say goodbye to confusing photo folders. Capture coordinates, altitude, timestamps, and notes with one tap.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.nextintinc.pronotecam" target="_blank" rel="noopener" class="pnc-btn-playstore" style="display:inline-flex; margin:0 auto;">
+      <i class="fab fa-google-play"></i>
+      <span>Download Free on Google Play</span>
+    </a>
+  </div>
+
+</div>
+
+<script>
+  function togglePncFaq(el) {
+    const item = el.parentElement;
+    const ans = item.querySelector('.pnc-faq-a');
+    const icon = el.querySelector('i');
+    if (ans.style.display === 'block') {
+      ans.style.display = 'none';
+      icon.style.transform = 'rotate(0deg)';
+    } else {
+      ans.style.display = 'block';
+      icon.style.transform = 'rotate(180deg)';
+    }
+  }
+</script>
