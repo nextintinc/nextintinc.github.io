@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "NextInt Inc | Android Apps by Vijay Sonawale — Play Store Portfolio"
-description: "NextInt Inc — 15+ Android apps by Vijay Sonawale. Udhari Book, Car Kundali, GovFitAI, EVM Voting, Rummy Jodi & more. Useful apps for Indian users. Download free on Google Play."
+title: "NextInt Inc | Android Apps & Games by Vijay Sonawale — Official Studio"
+description: "NextInt Inc — Privacy-first Android apps and relaxing puzzle games by Vijay Sonawale. Useful tools, field utilities, business ledgers, and logic puzzles. Free on Google Play."
 permalink: /
 ---
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NextInt Inc","legalName":"Vijay Santosh Sonawale","alternateName":"NextInt Inc","url":"https://nextintinc.in/","logo":"https://nextintinc.in/assets/icons/favicon-192x192.png","founder":{"@type":"Person","name":"Vijay Santosh Sonawale","jobTitle":"Android Developer","address":{"@type":"PostalAddress","addressLocality":"Ichalkaranji","addressRegion":"Maharashtra","addressCountry":"IN"}},"description":"Android app development for Indian users. Legal business name: Vijay Santosh Sonawale (Sole Proprietor), trading as NextInt Inc.","sameAs":["https://play.google.com/store/apps/dev?id=6143739259234112759"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NextInt Inc","legalName":"Vijay Santosh Sonawale","alternateName":"NextInt Inc","url":"https://nextintinc.in/","logo":"https://nextintinc.in/assets/icons/favicon-192x192.png","founder":{"@type":"Person","name":"Vijay Santosh Sonawale","jobTitle":"Android Developer","address":{"@type":"PostalAddress","addressLocality":"Ichalkaranji","addressRegion":"Maharashtra","addressCountry":"IN"}},"description":"Independent Android app and game studio. Legal business name: Vijay Santosh Sonawale (Sole Proprietor), trading as NextInt Inc.","sameAs":["https://play.google.com/store/apps/dev?id=6143739259234112759"]}</script>
 
 <style>
   :root{--main:#30bd9b;--main-dark:#239c7e;--dark:#000209;--dark2:#121158;--second-text:#515184;--body-text:#3b3b3c;--bg:#f8f8f8;--white:#ffffff;--border:#eaeaea;--intro-bg:#e1caff;--yellow:#fdeea5;--cs:4px 4px 0px 0px var(--dark);--csh:6px 6px 0px 0px var(--dark)}
@@ -249,15 +249,129 @@ permalink: /
 
   .ps-card{position:relative;cursor:pointer;-webkit-user-select:none;user-select:none}
   .btn-playstore{position:relative;z-index:2}
+
+  /* APP MARQUEE TICKER (SLIDING SHOWCASE) */
+  #app-marquee-section {
+    background: #000209;
+    padding: 18px 0;
+    overflow: hidden;
+    border-top: 2px solid #1a1a2e;
+    border-bottom: 2px solid #1a1a2e;
+    position: relative;
+  }
+  .marquee-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    color: var(--main);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--main);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px var(--main);
+    animation: marquee-pulse 1.8s infinite;
+  }
+  @keyframes marquee-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.35; transform: scale(0.85); }
+  }
+  .marquee-scroll-container {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 16px;
+    animation: marquee-slide 50s linear infinite;
+    white-space: nowrap;
+    flex-shrink: 0;
+    will-change: transform;
+  }
+  .marquee-scroll-container:hover .marquee-track {
+    animation-play-state: paused;
+  }
+  @keyframes marquee-slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .mq-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #0e121d;
+    border: 1.5px solid #232a3e;
+    border-radius: 12px;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #fff;
+    transition: all .2s ease;
+    flex-shrink: 0;
+  }
+  .mq-card:hover {
+    background: #171d2f;
+    border-color: var(--main);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(48,189,155,0.25);
+  }
+  .mq-card img {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .mq-meta {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .mq-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.25;
+  }
+  .mq-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+  }
+  .mq-sub .stars {
+    color: #f59e0b;
+    letter-spacing: -1px;
+    font-size: 10px;
+  }
+  .mq-sub .tag {
+    background: rgba(255,255,255,0.08);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    color: var(--main);
+  }
 </style>
 
 <section id="intro-wrap">
   <div class="container">
-    <div class="intro-tag">🚀 Android Developer · India · 18+ Apps</div>
+    <div class="intro-tag">🚀 Independent Android Studio · 18 Published Apps &amp; Games</div>
     <div class="intro-grid" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
       <div class="intro-content" style="max-width:800px; margin:0 auto;">
-        <h1 class="intro-title">Apps Made for<br><span class="hl">Real India</span></h1>
-        <p class="intro-snippet">Hi, I'm <strong>Vijay Sonawale</strong> — founder of <strong>NextInt Inc</strong>.<br>I build practical Android apps for Indian shopkeepers, farmers, car owners, job seekers &amp; puzzle lovers. From business tools to relaxing brain games — 18+ apps, all free on Play Store.</p>
+        <h1 class="intro-title">Smart Apps Built for<br><span class="hl">Everyday Life</span></h1>
+        <p class="intro-snippet">Hi, I'm <strong>Vijay Sonawale</strong> — founder of <strong>NextInt Inc</strong>.<br>I craft fast, privacy-first Android apps and relaxing logic puzzles enjoyed worldwide. From productivity utilities to brain challenges — 18 apps, 100% free with no forced accounts.</p>
         <div class="intro-btns" style="justify-content:center;">
           <a href="#apps" class="btn-main"><i class="fa fa-mobile-screen"></i> Explore All Apps</a>
           <a href="https://play.google.com/store/apps/dev?id=6143739259234112759" target="_blank" rel="noopener" class="btn-sec"><i class="fab fa-google-play"></i> Play Store</a>
@@ -272,10 +386,166 @@ permalink: /
 <div id="stats-wrap">
   <div class="container" style="padding:0">
     <div class="stats-grid">
-      <div class="stat-item"><div class="stat-icon">📱</div><div class="stat-num">18+</div><div class="stat-lbl">Android Apps</div></div>
-      <div class="stat-item"><div class="stat-icon">🌐</div><div class="stat-num">3+</div><div class="stat-lbl">Languages</div></div>
+      <div class="stat-item"><div class="stat-icon">📱</div><div class="stat-num">18</div><div class="stat-lbl">Published Apps</div></div>
+      <div class="stat-item"><div class="stat-icon">🌐</div><div class="stat-num">Global</div><div class="stat-lbl">Worldwide Reach</div></div>
       <div class="stat-item"><div class="stat-icon">🔒</div><div class="stat-num">0</div><div class="stat-lbl">Logins Required</div></div>
       <div class="stat-item"><div class="stat-icon">⭐</div><div class="stat-num">Free</div><div class="stat-lbl">Always Free</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== SLIDING APP MARQUEE TICKER ========== -->
+<div id="app-marquee-section">
+  <div class="marquee-bar-header"><span class="pulse-dot"></span> FEATURED APPS &amp; GAMES (SLIDE &amp; TAP TO VIEW)</div>
+  <div class="marquee-scroll-container">
+    <div class="marquee-track">
+      <!-- Track 1: 18 Apps -->
+      <a href="/tap-arrow-tap-away-puzzle-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/rYqvCdzZNaKTMOAiqXGc4GCdLHIOR5oEaaO4OW_crp0jd8qiRFqnVyPXb3S8ibSvaCdacDqZVQHsJJh9_raD=w240-h480-rw" alt="Tap Arrow" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Tap Arrow: Tap Away</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.8 · <span class="tag">Puzzle Game</span></div></div>
+      </a>
+      <a href="/pronotecam-gps-camera-notes-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/IVLMXzzyyaFX8oNlBVJKcfdB43sf4nueoUMA6R6IARW-0LzRnlX2PHZNr3jz8Q8u1h24twrt7WByNXbA16GlFg=s512-rw" alt="ProNoteCam" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">ProNoteCam: GPS Cam</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.9 · <span class="tag">Fieldwork</span></div></div>
+      </a>
+      <a href="/zip-puzzle-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/5UkAUFe-bxvL7dtAzxLWXxU6zQaSWD-1p-dQG-311qTX1xsW9isjlb7d5M6VRjV4cAOzuC6p1PfaQSjFUTcO=s512-rw" alt="ZIP Puzzle" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">ZIP Puzzle: Logic Game</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.7 · <span class="tag">Brain Game</span></div></div>
+      </a>
+      <a href="/udhari-book-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/KiaJmqpH5e6--a30S03knzP_DVaa0zpcUgZTr-_9aU9GWediqXa8gtPwVYW7BAv8hNSAiuXj9WN7luFE_nLp=s512-rw" alt="Udhari Book" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Udhari Book - Cash &amp; GST</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.5 · <span class="tag">Business</span></div></div>
+      </a>
+      <a href="/car-kundali-obd2-scanner-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/rZArMiw_jYQK295rFBzMSpOo52sFbVvJ9LTKb0NVMxCKu91Pehb1Ae4P1aMovykHm1Fj-wWKefqNBGDemqJm=s512-rw" alt="Car Kundali" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Car Kundali OBD2 Scan</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.4 · <span class="tag">Automotive</span></div></div>
+      </a>
+      <a href="/evm-voting-machine-mock-poll/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/8LwDSS_3KhofVNfSNPwnS0S_tf4ITM774DWi1qc3m4l4vQO-Pdh1xZcYWDJeQWjK86EKAknkZUa5HXvMGdYw=s512-rw" alt="EVM Voting Machine" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">EVM Voting Mock Poll</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.6 · <span class="tag">Democracy</span></div></div>
+      </a>
+      <a href="/labor-manager-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/4JOjuhh6xLtBD51LfnWadgXKoZ7lgbDj3VZm1MjuZitU5VpAACEC_9JErt_6539k1S66UgFuQps5FV_SGaVzag=s512-rw" alt="LaborManager" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">LaborManager Attendance</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.5 · <span class="tag">Workforce</span></div></div>
+      </a>
+      <a href="/wa-status-saver-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/9zE1ygZIMhbVVScO_QTrUy55yEIk5CaSCpWMrG5h0nRdVqNXKFl_Ca_MQU0v10Kx_FaUJt-7v6s3UzRsJOCSgVQ=s512-rw" alt="Wa Status Saver" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Wa Status Saver</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.5 · <span class="tag">Utilities</span></div></div>
+      </a>
+      <a href="/govfitai-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/HAbIwmFkkYvLyeeiDOyJT4Lf0Dojctp6klP4ix6O-FEyjqgEXvzV4YE-lpcg81ANvUQN7NFnAEUWgt7rMi3AjqM=s512-rw" alt="GovFitAI" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">GovFitAI Prep Quiz</div><div class="mq-sub"><span class="stars">★★★★☆</span> 4.3 · <span class="tag">Education</span></div></div>
+      </a>
+      <a href="/rummy-jodi-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/zvTHkQ8dSYi9eRzBGfsdj9N3O5qrysQrRWUYO6rNVcrnD5-njpIIsVyuEMaQNecsWaMtHMnwtK2vCqyzRlx0RJw=s512-rw" alt="Rummy Jodi" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Rummy Jodi Counter</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.6 · <span class="tag">Card Game</span></div></div>
+      </a>
+      <a href="/rummy-friends-club-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/Q-C-26VPvHaMkMSCyBZT9r7mFhIWfm1olbJGqyz5UNFFE9h3ARIvz14lcQg3NlT0mSxjNOkwLm6ne9ydG5VDks8=s512-rw" alt="Rummy Friends Club" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Rummy Friends Club</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.4 · <span class="tag">Card Games</span></div></div>
+      </a>
+      <a href="/cng-pump-status-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/pt5orqw0K4k1mfkBPRiFKX1u1F2XnIWcfS2T0rva7qyAh2m5Vu0vDhiiSANVAeGant9Har1HfVhBZm7CmDB4aQ=s512-rw" alt="CNG Pump Status" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">CNG Pump Tracker</div><div class="mq-sub"><span class="stars">★★★★☆</span> 4.1 · <span class="tag">Fuel &amp; GPS</span></div></div>
+      </a>
+      <a href="/aaj-ka-rashifal-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/2HAUI1PzIVLNeBnLbRkxjFxRzyIS2gKvcF1XEX1KQOzwyeJkMc2eL4OOp1KVOme9XCfejLUGnSkrujadW6N0=s512-rw" alt="Aaj Ka Rashifal" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Aaj Ka Rashifal 2026</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.6 · <span class="tag">Lifestyle</span></div></div>
+      </a>
+      <a href="/ladki-bahin-yojana-ekyc-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/Bq5hk3vz7sOl1geE_TQjHV1T_vCcR_VP4yoNC6KyJf2NPswAhLWQbQjaQ_iJD521KB3ALJtplPGy1foHdIU6hg=s512-rw" alt="Ladki Bahin" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Ladki Bahin Info</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.5 · <span class="tag">Civic Info</span></div></div>
+      </a>
+      <a href="/nari-shakti-doot-app-ladki-bahin-yojana-2026/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/JgVbidrsL8HqKUrjXn8Ug_THv-CjhQl0ytnBoa-vy2XdYjEcXCVxYf0vDrQXxTa0JDAtK6Q9Ug6o93TJYc2K=s512-rw" alt="Nari Shakti Doot" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Nari Shakti Doot Guide</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.4 · <span class="tag">Citizen Guide</span></div></div>
+      </a>
+      <a href="/agristack-farmer-registration-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/I69HmuXENu55tN83rxhLS4qzdykAsECGvoUXzEfuYJjxtEIyB6NYjhWg_tLhTs0OfVhO4IWCuilAfovu-yGS=s512-rw" alt="Farmer Registry" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Farmer Registry AgriStack</div><div class="mq-sub"><span class="stars">★★★★☆</span> 4.2 · <span class="tag">Agri Portal</span></div></div>
+      </a>
+      <a href="/setkari-karjmafi-krushi-yojana-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/v6IWbpTv55t2650OLZq4NdCCYh7_UATj2nViiQoVApS8MADqsMbXxj_1_MHP_-Q7rctOHIHEt2o4u1mCmqvo=s512-rw" alt="Setkari Karjmafi" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Setkari Karjmafi Krushi</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.5 · <span class="tag">Agri Welfare</span></div></div>
+      </a>
+      <a href="/mahila-shetkari-pramanpatra-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/2mhS3ECXJVjeYKHS5MezBm3WLRI2VKWfhbyDoGITc6bsZ_4Y7zXiQ3O9TKdn9x57bj74u4OSeyhI8REx5JNtyg=s512-rw" alt="Mahila Shetkari" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">महिला शेतकरी प्रमाणपत्र</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.8 · <span class="tag">Schemes</span></div></div>
+      </a>
+
+      <!-- Track 2 (Duplicate for Seamless Infinite Loop) -->
+      <a href="/tap-arrow-tap-away-puzzle-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/rYqvCdzZNaKTMOAiqXGc4GCdLHIOR5oEaaO4OW_crp0jd8qiRFqnVyPXb3S8ibSvaCdacDqZVQHsJJh9_raD=w240-h480-rw" alt="Tap Arrow" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Tap Arrow: Tap Away</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.8 · <span class="tag">Puzzle Game</span></div></div>
+      </a>
+      <a href="/pronotecam-gps-camera-notes-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/IVLMXzzyyaFX8oNlBVJKcfdB43sf4nueoUMA6R6IARW-0LzRnlX2PHZNr3jz8Q8u1h24twrt7WByNXbA16GlFg=s512-rw" alt="ProNoteCam" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">ProNoteCam: GPS Cam</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.9 · <span class="tag">Fieldwork</span></div></div>
+      </a>
+      <a href="/zip-puzzle-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/5UkAUFe-bxvL7dtAzxLWXxU6zQaSWD-1p-dQG-311qTX1xsW9isjlb7d5M6VRjV4cAOzuC6p1PfaQSjFUTcO=s512-rw" alt="ZIP Puzzle" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">ZIP Puzzle: Logic Game</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.7 · <span class="tag">Brain Game</span></div></div>
+      </a>
+      <a href="/udhari-book-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/KiaJmqpH5e6--a30S03knzP_DVaa0zpcUgZTr-_9aU9GWediqXa8gtPwVYW7BAv8hNSAiuXj9WN7luFE_nLp=s512-rw" alt="Udhari Book" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Udhari Book - Cash &amp; GST</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.5 · <span class="tag">Business</span></div></div>
+      </a>
+      <a href="/car-kundali-obd2-scanner-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/rZArMiw_jYQK295rFBzMSpOo52sFbVvJ9LTKb0NVMxCKu91Pehb1Ae4P1aMovykHm1Fj-wWKefqNBGDemqJm=s512-rw" alt="Car Kundali" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Car Kundali OBD2 Scan</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.4 · <span class="tag">Automotive</span></div></div>
+      </a>
+      <a href="/evm-voting-machine-mock-poll/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/8LwDSS_3KhofVNfSNPwnS0S_tf4ITM774DWi1qc3m4l4vQO-Pdh1xZcYWDJeQWjK86EKAknkZUa5HXvMGdYw=s512-rw" alt="EVM Voting Machine" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">EVM Voting Mock Poll</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.6 · <span class="tag">Democracy</span></div></div>
+      </a>
+      <a href="/labor-manager-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/4JOjuhh6xLtBD51LfnWadgXKoZ7lgbDj3VZm1MjuZitU5VpAACEC_9JErt_6539k1S66UgFuQps5FV_SGaVzag=s512-rw" alt="LaborManager" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">LaborManager Attendance</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.5 · <span class="tag">Workforce</span></div></div>
+      </a>
+      <a href="/wa-status-saver-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/9zE1ygZIMhbVVScO_QTrUy55yEIk5CaSCpWMrG5h0nRdVqNXKFl_Ca_MQU0v10Kx_FaUJt-7v6s3UzRsJOCSgVQ=s512-rw" alt="Wa Status Saver" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Wa Status Saver</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.5 · <span class="tag">Utilities</span></div></div>
+      </a>
+      <a href="/govfitai-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/HAbIwmFkkYvLyeeiDOyJT4Lf0Dojctp6klP4ix6O-FEyjqgEXvzV4YE-lpcg81ANvUQN7NFnAEUWgt7rMi3AjqM=s512-rw" alt="GovFitAI" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">GovFitAI Prep Quiz</div><div class="mq-sub"><span class="stars">★★★★☆</span> 4.3 · <span class="tag">Education</span></div></div>
+      </a>
+      <a href="/rummy-jodi-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/zvTHkQ8dSYi9eRzBGfsdj9N3O5qrysQrRWUYO6rNVcrnD5-njpIIsVyuEMaQNecsWaMtHMnwtK2vCqyzRlx0RJw=s512-rw" alt="Rummy Jodi" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Rummy Jodi Counter</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.6 · <span class="tag">Card Game</span></div></div>
+      </a>
+      <a href="/rummy-friends-club-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/Q-C-26VPvHaMkMSCyBZT9r7mFhIWfm1olbJGqyz5UNFFE9h3ARIvz14lcQg3NlT0mSxjNOkwLm6ne9ydG5VDks8=s512-rw" alt="Rummy Friends Club" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Rummy Friends Club</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.4 · <span class="tag">Card Games</span></div></div>
+      </a>
+      <a href="/cng-pump-status-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/pt5orqw0K4k1mfkBPRiFKX1u1F2XnIWcfS2T0rva7qyAh2m5Vu0vDhiiSANVAeGant9Har1HfVhBZm7CmDB4aQ=s512-rw" alt="CNG Pump Status" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">CNG Pump Tracker</div><div class="mq-sub"><span class="stars">★★★★☆</span> 4.1 · <span class="tag">Fuel &amp; GPS</span></div></div>
+      </a>
+      <a href="/aaj-ka-rashifal-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/2HAUI1PzIVLNeBnLbRkxjFxRzyIS2gKvcF1XEX1KQOzwyeJkMc2eL4OOp1KVOme9XCfejLUGnSkrujadW6N0=s512-rw" alt="Aaj Ka Rashifal" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Aaj Ka Rashifal 2026</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.6 · <span class="tag">Lifestyle</span></div></div>
+      </a>
+      <a href="/ladki-bahin-yojana-ekyc-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/Bq5hk3vz7sOl1geE_TQjHV1T_vCcR_VP4yoNC6KyJf2NPswAhLWQbQjaQ_iJD521KB3ALJtplPGy1foHdIU6hg=s512-rw" alt="Ladki Bahin" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Ladki Bahin Info</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.5 · <span class="tag">Civic Info</span></div></div>
+      </a>
+      <a href="/nari-shakti-doot-app-ladki-bahin-yojana-2026/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/JgVbidrsL8HqKUrjXn8Ug_THv-CjhQl0ytnBoa-vy2XdYjEcXCVxYf0vDrQXxTa0JDAtK6Q9Ug6o93TJYc2K=s512-rw" alt="Nari Shakti Doot" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Nari Shakti Doot Guide</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.4 · <span class="tag">Citizen Guide</span></div></div>
+      </a>
+      <a href="/agristack-farmer-registration-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/I69HmuXENu55tN83rxhLS4qzdykAsECGvoUXzEfuYJjxtEIyB6NYjhWg_tLhTs0OfVhO4IWCuilAfovu-yGS=s512-rw" alt="Farmer Registry" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Farmer Registry AgriStack</div><div class="mq-sub"><span class="stars">★★★★☆</span> 4.2 · <span class="tag">Agri Portal</span></div></div>
+      </a>
+      <a href="/setkari-karjmafi-krushi-yojana-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/v6IWbpTv55t2650OLZq4NdCCYh7_UATj2nViiQoVApS8MADqsMbXxj_1_MHP_-Q7rctOHIHEt2o4u1mCmqvo=s512-rw" alt="Setkari Karjmafi" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">Setkari Karjmafi Krushi</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.5 · <span class="tag">Agri Welfare</span></div></div>
+      </a>
+      <a href="/mahila-shetkari-pramanpatra-app/" class="mq-card">
+        <img src="https://play-lh.googleusercontent.com/2mhS3ECXJVjeYKHS5MezBm3WLRI2VKWfhbyDoGITc6bsZ_4Y7zXiQ3O9TKdn9x57bj74u4OSeyhI8REx5JNtyg=s512-rw" alt="Mahila Shetkari" loading="lazy">
+        <div class="mq-meta"><div class="mq-title">महिला शेतकरी प्रमाणपत्र</div><div class="mq-sub"><span class="stars">★★★★★</span> 4.8 · <span class="tag">Schemes</span></div></div>
+      </a>
     </div>
   </div>
 </div>
@@ -286,7 +556,7 @@ permalink: /
     <div class="head-text">
       <div class="sec-tag">📱 App Portfolio</div>
       <h2>All Android Apps by NextInt Inc</h2>
-      <p>Explore our complete collection of 18+ Android apps. Tap "Install" to learn more or go directly to Google Play Store.</p>
+      <p>Explore our complete collection of 18 Android apps and games. Tap "Install" to learn more or go directly to Google Play Store.</p>
     </div>
 
     <!-- Category Filter Tabs -->
@@ -686,10 +956,10 @@ permalink: /
 <!-- ========== WHY CHOOSE ========== -->
 <section class="sw bg-bg" id="features">
   <div class="container">
-    <div class="head-text"><div class="sec-tag">✨ Why Choose</div><h2>What Makes These Apps Different</h2><p>Designed specifically for the Indian market — simple, private, and offline-first.</p></div>
+    <div class="head-text"><div class="sec-tag">✨ Why Choose</div><h2>What Makes These Apps Different</h2><p>Crafted with a privacy-first, offline-first mindset — fast, lightweight, and intuitive for users everywhere.</p></div>
     <div class="feat-grid">
       <div class="feat-card fu"><div class="feat-icon">🔒</div><h3>100% Private</h3><p>All data stays on your device. No server, no cloud upload, no tracking. Your business data is only yours.</p></div>
-      <div class="feat-card fu"><div class="feat-icon">🌐</div><h3>Hindi · Marathi · English</h3><p>Multi-language support with reminders and messages in the language you prefer most.</p></div>
+      <div class="feat-card fu"><div class="feat-icon">🌐</div><h3>Multi-Language &amp; Global</h3><p>Built for international accessibility with multi-language interfaces and offline-first support.</p></div>
       <div class="feat-card fu"><div class="feat-icon">📵</div><h3>No Login Needed</h3><p>Install and start using instantly. No account creation, no OTP, no email required — ever.</p></div>
       <div class="feat-card fu"><div class="feat-icon">📶</div><h3>Works Offline</h3><p>Most features work without internet. Perfect for areas with slow or no connectivity.</p></div>
       <div class="feat-card fu"><div class="feat-icon">💡</div><h3>Lightweight &amp; Fast</h3><p>Optimized for entry-level Android devices. Smooth performance even on 2GB RAM phones.</p></div>
@@ -721,7 +991,7 @@ permalink: /
 <!-- ========== CTA ========== -->
 <div id="cta-wrap">
   <div class="container">
-    <h2>18+ Apps — Free on Google Play</h2>
+    <h2>Explore Our Android Apps &amp; Games — Free on Google Play</h2>
     <p>No login. No subscription. No data collection. Just install and use.</p>
     <a href="https://play.google.com/store/apps/dev?id=6143739259234112759" target="_blank" rel="noopener" class="btn-cta"><i class="fab fa-google-play" style="font-size:13px"></i> View All Apps on Play Store</a>
   </div>
@@ -735,13 +1005,13 @@ permalink: /
       <div class="about-content">
         <div class="sec-tag-inline">About Me</div>
         <h2>Vijay Santosh Sonawale &amp;<br><span>NextInt Inc</span></h2>
-        <p><strong>Legal Business Name: Vijay Santosh Sonawale</strong> (Sole Proprietor), operating under the brand name <strong>NextInt Inc</strong>. I'm an independent Android developer from Maharashtra, India. I build apps that solve real everyday problems for Indian users — shopkeepers, drivers, farmers, students, and job seekers.</p>
+        <p><strong>Legal Business Name: Vijay Santosh Sonawale</strong> (Sole Proprietor), operating under the brand name <strong>NextInt Inc</strong>. I'm an independent Android developer from Maharashtra, India. I build practical, lightweight Android apps that solve everyday problems — from utility tools and field cameras to relaxing logic games and civic resources.</p>
         <p>All apps published under the NextInt Inc brand are owned and operated by <strong>Vijay Santosh Sonawale</strong> as a registered sole proprietorship, published on Google Play with a privacy-first approach. Everything runs on your device — no accounts, no data collection.</p>
         <ul class="about-list">
-          <li><span class="chk">✔</span>18+ Android apps published on Google Play</li>
-          <li><span class="chk">✔</span>Hindi, Marathi &amp; English support</li>
+          <li><span class="chk">✔</span>18 Android apps published on Google Play</li>
+          <li><span class="chk">✔</span>Global language &amp; regional accessibility</li>
           <li><span class="chk">✔</span>Privacy-first: no login, no data upload</li>
-          <li><span class="chk">✔</span>Designed for Indian market needs</li>
+          <li><span class="chk">✔</span>Offline-first architecture &amp; lightweight APKs</li>
           <li><span class="chk">✔</span>All apps completely free to use</li>
         </ul>
         <div class="pills"><span class="pill">👤 Vijay Santosh Sonawale</span><span class="pill">🏢 NextInt Inc</span><span class="pill">📍 Maharashtra 🇮🇳</span></div>
