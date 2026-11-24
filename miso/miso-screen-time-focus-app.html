@@ -1,0 +1,954 @@
+---
+layout: default
+title: "Miso: Screen Time & Focus — Cozy Cat Companion for Intentional Screen Time"
+description: "Meet Miso, your cozy cat companion for more intentional screen time. Set gentle app boundaries, focus on deep work, and earn extra app minutes through quick movement breaks."
+permalink: /miso-app/
+---
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Miso: Screen Time & Focus — Cozy Cat Companion App">
+<meta property="og:description" content="A little room for real life. Gentle boundaries for distracting apps, focus sessions with your cat companion, and camera-powered movement breaks.">
+<meta property="og:url" content="https://nextintinc.in/miso-app/">
+<meta property="og:image" content="https://nextintinc.in/assets/icons/miso.png">
+<meta property="og:site_name" content="NextInt Inc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Miso: Screen Time & Focus App">
+<meta name="twitter:description" content="Gentle app boundaries, focus timer sessions, and movement breaks for extra screen time. Free Android app by NextInt Inc.">
+<meta name="twitter:image" content="https://nextintinc.in/assets/icons/miso.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Miso: Screen Time & Focus",
+  "operatingSystem": "Android",
+  "applicationCategory": "ProductivityApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Meet Miso, your cozy cat companion for more intentional screen time. Choose distracting apps to protect, set focus sessions, and turn quick movement breaks into extra minutes.",
+  "image": "https://nextintinc.in/assets/icons/miso.png",
+  "author": { "@type": "Organization", "name": "NextInt Inc", "url": "https://nextintinc.in/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nextintinc.in/" },
+    { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://nextintinc.in/#apps" },
+    { "@type": "ListItem", "position": 3, "name": "Miso: Screen Time & Focus", "item": "https://nextintinc.in/miso-app/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Miso: Screen Time & Focus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Miso is a cozy cat companion app designed for intentional screen time and digital wellbeing. It lets you set gentle boundaries for distracting apps, stay focused during Pomodoro-style sessions while Miso sleeps peacefully, and earn extra minutes by doing quick physical exercise breaks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do movement breaks work to earn extra screen time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Miso includes on-device camera-powered rep counting for push-ups, squats, jumping jacks, sit-ups, and planks. Each verified rep gives you 1 minute of extra app time, and a 30-second plank hold earns 1 minute. Video is processed purely in real-time on your phone and is never recorded or uploaded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Miso request Accessibility permissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Miso uses the Android Accessibility Service strictly to detect when a protected distracting app is launched so it can display a friendly screen break when your minutes are up. It does not read your screen content, keystrokes, personal messages, or private data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Miso record or store my camera video?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The camera is used solely for on-device pose estimation during movement breaks. No videos or photos are ever saved to your gallery, stored on disk, or uploaded to any cloud server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Miso free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! You can start protecting apps, running focus sessions, and earning minutes with movement breaks completely free. An optional 30-credit pack is available if you need immediate extra minutes, and an optional monthly membership unlocks additional protected apps."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+  :root {
+    --miso-bg: #fbf7f2;
+    --miso-card: #ffffff;
+    --miso-dark: #2c2523;
+    --miso-sub: #5c524e;
+    --miso-orange: #e07a5f;
+    --miso-orange-dark: #cc6045;
+    --miso-orange-soft: #fdeee9;
+    --miso-sage: #d9e5db;
+    --miso-sage-dark: #587d64;
+    --miso-sage-soft: #f0f5f1;
+    --miso-honey: #f4a261;
+    --miso-cream: #fef9f0;
+    --miso-yellow: #fce8a9;
+    --miso-border: #2c2523;
+    --cs: 4px 4px 0px 0px var(--miso-border);
+    --csh: 6px 6px 0px 0px var(--miso-border);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    color: var(--miso-sub);
+    background: var(--miso-bg);
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Nunito', sans-serif;
+    color: var(--miso-dark);
+    font-weight: 800;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  .miso-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ═══ HERO ═══ */
+  .miso-hero {
+    background: linear-gradient(180deg, #f3eae0 0%, var(--miso-bg) 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    border-bottom: 2px solid var(--miso-border);
+  }
+  .miso-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .miso-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--miso-yellow);
+    border: 2px solid var(--miso-border);
+    box-shadow: 2px 2px 0 var(--miso-border);
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--miso-dark);
+    margin-bottom: 20px;
+  }
+  .miso-hero h1 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+  .miso-hero h1 span {
+    color: var(--miso-orange);
+    position: relative;
+    display: inline-block;
+  }
+  .miso-hero-lead {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--miso-dark);
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .miso-hero-lead em {
+    font-style: normal;
+    background: var(--miso-sage);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+  }
+  .miso-hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .btn-miso-play {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--miso-orange);
+    color: #fff !important;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: 2px solid var(--miso-border);
+    box-shadow: var(--cs);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  .btn-miso-play:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--csh);
+    background: var(--miso-orange-dark);
+  }
+  .btn-miso-sub {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: var(--miso-dark) !important;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: 2px solid var(--miso-border);
+    box-shadow: var(--cs);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-miso-sub:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--csh);
+  }
+  .miso-trust-bar {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--miso-sub);
+  }
+  .miso-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .miso-hero-preview {
+    text-align: center;
+    position: relative;
+  }
+  .miso-avatar-card {
+    background: #fff;
+    border: 3px solid var(--miso-border);
+    border-radius: 28px;
+    padding: 30px 24px;
+    box-shadow: 8px 8px 0px 0px var(--miso-border);
+    position: relative;
+  }
+  .miso-cat-icon {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 16px;
+    border-radius: 28px;
+    border: 3px solid var(--miso-border);
+    box-shadow: 4px 4px 0 var(--miso-border);
+    overflow: hidden;
+    background: var(--miso-sage-soft);
+  }
+  .miso-cat-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .miso-quote {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--miso-dark);
+    margin-bottom: 8px;
+  }
+  .miso-quote-sub {
+    font-size: 14px;
+    color: var(--miso-sub);
+    line-height: 1.5;
+  }
+  .miso-tag-pill {
+    display: inline-block;
+    background: var(--miso-orange-soft);
+    color: var(--miso-orange-dark);
+    border: 1.5px solid var(--miso-border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 14px;
+  }
+
+  /* ═══ SCREENSHOT GALLERY SECTION ═══ */
+  .miso-gallery-section {
+    padding: 60px 0;
+    background: #eef3ee;
+    border-bottom: 2px solid var(--miso-border);
+    position: relative;
+    overflow: hidden;
+  }
+  .sec-tag-miso {
+    display: inline-block;
+    background: var(--miso-yellow);
+    border: 2px solid var(--miso-border);
+    box-shadow: 2px 2px 0 var(--miso-border);
+    color: var(--miso-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .miso-section-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .miso-section-header h2 {
+    font-size: clamp(26px, 3.8vw, 38px);
+    margin-bottom: 10px;
+  }
+  .miso-section-header p {
+    font-size: 15px;
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--miso-sub);
+  }
+
+  .miso-gallery-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 20px 30px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--miso-orange) #ddd;
+    -webkit-overflow-scrolling: touch;
+  }
+  .miso-gallery-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  .miso-gallery-scroll::-webkit-scrollbar-thumb {
+    background: var(--miso-orange);
+    border-radius: 4px;
+    border: 1px solid var(--miso-border);
+  }
+  .miso-ss-card {
+    flex: 0 0 260px;
+    scroll-snap-align: center;
+    background: #fff;
+    border: 2px solid var(--miso-border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--cs);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .miso-ss-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--csh);
+  }
+  .miso-ss-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+  }
+  .miso-ss-caption {
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--miso-dark);
+    text-align: center;
+    background: #fff;
+    border-top: 1.5px solid #eee;
+  }
+
+  /* ═══ FEATURES ═══ */
+  .miso-features-section {
+    padding: 80px 0 60px;
+  }
+  .miso-feat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  .miso-feat-card {
+    background: #fff;
+    border: 2px solid var(--miso-border);
+    border-radius: 20px;
+    padding: 30px 26px;
+    box-shadow: var(--cs);
+    transition: transform 0.17s ease, box-shadow 0.17s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .miso-feat-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: var(--csh);
+  }
+  .miso-feat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    border: 2px solid var(--miso-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 0 var(--miso-border);
+  }
+  .icon-sage { background: var(--miso-sage); }
+  .icon-orange { background: var(--miso-orange-soft); }
+  .icon-honey { background: #ffe4b8; }
+  .icon-yellow { background: var(--miso-yellow); }
+  .icon-cream { background: #e8ecf4; }
+  .icon-rose { background: #fbe0e0; }
+
+  .miso-feat-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .miso-feat-card p {
+    font-size: 14.5px;
+    color: var(--miso-sub);
+    line-height: 1.7;
+    flex-grow: 1;
+  }
+  .miso-feat-highlight {
+    margin-top: 16px;
+    padding: 10px 14px;
+    background: var(--miso-bg);
+    border-radius: 10px;
+    border: 1px dashed #c0b7af;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--miso-dark);
+  }
+
+  /* ═══ HOW IT WORKS / ROUTINE ═══ */
+  .miso-routine-section {
+    padding: 70px 0;
+    background: #fff;
+    border-top: 2px solid var(--miso-border);
+    border-bottom: 2px solid var(--miso-border);
+  }
+  .miso-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+  }
+  .miso-step-card {
+    background: var(--miso-cream);
+    border: 2px solid var(--miso-border);
+    border-radius: 16px;
+    padding: 24px 20px;
+    box-shadow: var(--cs);
+    position: relative;
+  }
+  .miso-step-num {
+    width: 38px;
+    height: 38px;
+    background: var(--miso-orange);
+    color: #fff;
+    border: 2px solid var(--miso-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 14px;
+    box-shadow: 2px 2px 0 var(--miso-border);
+  }
+  .miso-step-card h4 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .miso-step-card p {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  /* ═══ PERMISSION & PRIVACY BOX ═══ */
+  .miso-privacy-box {
+    margin: 60px 0;
+    background: var(--miso-sage-soft);
+    border: 2px solid var(--miso-border);
+    border-radius: 20px;
+    padding: 36px 30px;
+    box-shadow: var(--cs);
+  }
+  .miso-privacy-box h3 {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .miso-privacy-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .miso-p-card {
+    background: #fff;
+    border: 2px solid var(--miso-border);
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .miso-p-card h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: var(--miso-dark);
+  }
+  .miso-p-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ═══ FAQ SECTION ═══ */
+  .miso-faq-section {
+    padding: 60px 0;
+  }
+  .miso-faq-grid {
+    max-width: 840px;
+    margin: 0 auto;
+    display: grid;
+    gap: 14px;
+  }
+  .miso-faq-item {
+    background: #fff;
+    border: 2px solid var(--miso-border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--cs);
+  }
+  .miso-faq-question {
+    padding: 18px 22px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--miso-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s ease;
+  }
+  .miso-faq-question:hover {
+    background: var(--miso-orange-soft);
+  }
+  .miso-faq-question i {
+    font-size: 16px;
+    transition: transform 0.25s ease;
+    color: var(--miso-orange);
+  }
+  .miso-faq-answer {
+    padding: 0 22px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--miso-sub);
+    background: #fff;
+  }
+  .miso-faq-item.active .miso-faq-answer {
+    max-height: 350px;
+    padding: 0 22px 20px;
+  }
+  .miso-faq-item.active .miso-faq-question i {
+    transform: rotate(180deg);
+  }
+
+  /* ═══ CTA SECTION ═══ */
+  .miso-cta {
+    background: var(--miso-orange);
+    border-top: 2px solid var(--miso-border);
+    border-bottom: 2px solid var(--miso-border);
+    padding: 64px 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .miso-cta h2 {
+    color: #fff;
+    font-size: clamp(26px, 4vw, 42px);
+    margin-bottom: 12px;
+  }
+  .miso-cta p {
+    font-size: 17px;
+    max-width: 620px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.7;
+  }
+  .btn-cta-miso {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--miso-dark);
+    color: #fff !important;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    padding: 16px 36px;
+    border-radius: 14px;
+    border: 2px solid #fff;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-cta-miso:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ═══ RESPONSIVE ═══ */
+  @media (max-width: 860px) {
+    .miso-hero-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 36px;
+    }
+    .miso-hero-actions {
+      justify-content: center;
+    }
+    .miso-trust-bar {
+      justify-content: center;
+    }
+    .miso-privacy-points {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<!-- ═══ HERO SECTION ═══ -->
+<section class="miso-hero">
+  <div class="miso-container">
+    <div class="miso-hero-grid">
+      <div>
+        <div class="miso-badge">
+          🐾 <span>Digital Wellbeing & Focus Companion</span>
+        </div>
+        <h1>
+          A little room for <span>real life</span>.
+        </h1>
+        <p class="miso-hero-lead">
+          Meet <strong>Miso</strong>, your cozy cat companion for more intentional screen time. Choose the apps that distract you, make space for focused work, and turn a short movement break into <em>extra app minutes</em>.
+        </p>
+        <div class="miso-hero-actions">
+          <a href="https://play.google.com/store/apps/dev?id=6143739259234112759" target="_blank" rel="noopener" class="btn-miso-play">
+            <i class="fab fa-google-play"></i> Get Miso on Google Play
+          </a>
+          <a href="#features" class="btn-miso-sub">
+            <i class="fa fa-sparkles"></i> Explore Features
+          </a>
+        </div>
+        <div class="miso-trust-bar">
+          <div class="miso-trust-item"><i class="fa fa-shield-cat" style="color:var(--miso-orange)"></i> Zero Screen Reading</div>
+          <div class="miso-trust-item"><i class="fa fa-lock" style="color:var(--miso-orange)"></i> 100% On-Device AI Vision</div>
+          <div class="miso-trust-item"><i class="fa fa-heart" style="color:var(--miso-orange)"></i> Calming & Guilt-Free</div>
+        </div>
+      </div>
+
+      <div class="miso-hero-preview">
+        <div class="miso-avatar-card">
+          <div class="miso-cat-icon">
+            <img src="/assets/icons/miso.png" alt="Miso: Screen Time & Focus App Icon">
+          </div>
+          <div class="miso-quote">"Start small. Put the phone aside."</div>
+          <p class="miso-quote-sub">Warm colors, a resting cat, and mindful controls make Miso a peaceful retreat for your daily digital habits.</p>
+          <div class="miso-tag-pill">🐱 1 Rep = 1 Minute of Screen Time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HD SCREENSHOTS GALLERY ═══ -->
+<section class="miso-gallery-section" id="previews">
+  <div class="miso-container">
+    <div class="miso-section-header">
+      <div class="sec-tag-miso">📸 Inside Miso</div>
+      <h2>Designed for Calm, Intentional Focus</h2>
+      <p>Scroll through the official high-resolution previews to see Miso's gentle boundary screens, focus timers, and movement tracking in action.</p>
+    </div>
+
+    <div class="miso-gallery-scroll">
+      <!-- Screenshot 1 -->
+      <div class="miso-ss-card">
+        <img src="https://play-lh.googleusercontent.com/ZsRr6GltIb88_pYRUvUf4LsT6fhc_RGGnttBLVrrXUdzkvQBoTWWu3Ym0r4xIY_s672krIXyDjcQDYyxwGqlt8A=s2560-rw" alt="Miso Screen Time Home Screen & Cat Companion" loading="lazy">
+        <div class="miso-ss-caption">Cozy Cat Companion & Minutes Balance</div>
+      </div>
+      <!-- Screenshot 2 -->
+      <div class="miso-ss-card">
+        <img src="https://play-lh.googleusercontent.com/MDFmaPHvU5d_plgYuRO9o6dEH72ycN3scbsz7nGAUlNBE48oRoroeO4AEiewT3RL3azt7WtFiKb71v0ohFYDOw=s2560-rw" alt="Miso Focus Session Timer with Sleeping Cat" loading="lazy">
+        <div class="miso-ss-caption">5, 15, 25 & 45-Minute Focus Timers</div>
+      </div>
+      <!-- Screenshot 3 -->
+      <div class="miso-ss-card">
+        <img src="https://play-lh.googleusercontent.com/P0PN3lWCp0Y1GalNXy18bqJ6Er6UKRCdYsV88sIL6eKG4rSFeXMYrDj2k9aGJfZuukY0T-_9wYoZi8xQsU1dDw=s2560-rw" alt="Miso Camera-Powered Movement & Rep Counting" loading="lazy">
+        <div class="miso-ss-caption">Camera-Powered Exercise & Rep Counting</div>
+      </div>
+      <!-- Screenshot 4 -->
+      <div class="miso-ss-card">
+        <img src="https://play-lh.googleusercontent.com/6xiUSivOTViu5lTRnbOlmjrRuQPDJ9273gbShH49dNgpMZTAUtUsPPwwJap8Dnv8Xal837ftstE5cmbByHa70Q=s2560-rw" alt="Miso Protected Apps Selection & Boundary Setup" loading="lazy">
+        <div class="miso-ss-caption">Gentle App Protection Boundaries</div>
+      </div>
+      <!-- Screenshot 5 -->
+      <div class="miso-ss-card">
+        <img src="https://play-lh.googleusercontent.com/vu7UQt8Iki_B5xpIBv4H4g1vX_VIOKjTMW30_UoOO0eFXhSUa1VOjKUwPhq1oN9ZocHYAysSbB8nRG5BQX0A=s2560-rw" alt="Miso Earned Minutes Breakdown and Usage Stats" loading="lazy">
+        <div class="miso-ss-caption">Available Credits & Transparent Minutes</div>
+      </div>
+      <!-- Screenshot 6 -->
+      <div class="miso-ss-card">
+        <img src="https://play-lh.googleusercontent.com/NK8DEH-6Yy57YNeiiiKenwP-w1wY5oH1HB5Z1V3q5bL_MmIwKgrcBhpgD9yTk-wOHNHM88dH2Mzjc89zncel=s2560-rw" alt="Miso Mindful Daily Screen Routine" loading="lazy">
+        <div class="miso-ss-caption">Make Room for What Truly Matters</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CORE FEATURES ═══ -->
+<section class="miso-features-section" id="features">
+  <div class="miso-container">
+    <div class="miso-section-header">
+      <div class="sec-tag-miso">✨ Mindful Features</div>
+      <h2>Everything You Need to Reclaim Your Attention</h2>
+      <p>Traditional app blockers trigger stress and guilt. Miso replaces harsh lockouts with cozy encouragement, healthy movement, and mindful boundaries.</p>
+    </div>
+
+    <div class="miso-feat-grid">
+      <!-- Feature 1 -->
+      <div class="miso-feat-card">
+        <div class="miso-feat-icon icon-sage">🛡️</div>
+        <h3>Gentle Boundaries for Distracting Apps</h3>
+        <p>Choose which apps you want Miso to protect. Start with one protected app. When you have no available minutes, Miso shows a friendly screen break instead of letting infinite scrolling carry on unnoticed.</p>
+        <div class="miso-feat-highlight">
+          🍃 No jarring lockouts — just a warm reminder to pause and breathe.
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="miso-feat-card">
+        <div class="miso-feat-icon icon-orange">⏳</div>
+        <h3>Focus on One Thing</h3>
+        <p>Set a 5, 15, 25, or 45-minute focus session. Put your phone aside while Miso keeps you company. During an active focus session, selected protected apps are blocked when Miso's protection service is enabled.</p>
+        <div class="miso-feat-highlight">
+          🐱 A cozy sleeping companion to keep you company during deep work.
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="miso-feat-card">
+        <div class="miso-feat-icon icon-honey">🤸</div>
+        <h3>Move a Little. Earn a Little Time.</h3>
+        <p>Take a quick stretch break with camera-powered rep counting for push-ups, squats, jumping jacks, and sit-ups, or hold a plank. Complete the movement to earn extra app time.</p>
+        <div class="miso-feat-highlight">
+          💪 1 credited rep = 1 extra minute. A 30s plank = 1 extra minute.
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="miso-feat-card">
+        <div class="miso-feat-icon icon-yellow">🪙</div>
+        <h3>Your Minutes, Clearly Shown</h3>
+        <p>One credit equals one minute of extra app time. Transparently view your available minutes and protected-app usage. Earned minutes stay safely on your device.</p>
+        <div class="miso-feat-highlight">
+          📊 No cryptic algorithms or confusing timers. Complete clarity.
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="miso-feat-card">
+        <div class="miso-feat-icon icon-rose">🐾</div>
+        <h3>A Cozy Companion</h3>
+        <p>Warm colors, a resting cat, and simple controls make Miso a quieter place to return to. Build a small, rewarding routine around the moments and hobbies you want back.</p>
+        <div class="miso-feat-highlight">
+          ☕ Calming pastel palette crafted to reduce phone-induced anxiety.
+        </div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="miso-feat-card">
+        <div class="miso-feat-icon icon-cream">🛒</div>
+        <h3>Flexible & Transparent Purchases</h3>
+        <p>Start free! Optional 30-credit packs provide 30 extra minutes when needed. An optional monthly membership unlocks additional protected apps. Subscriptions manage easily in Google Play.</p>
+        <div class="miso-feat-highlight">
+          ⭐ Complete freedom to build habits at your own pace without pressure.
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ PRIVACY & PERMISSIONS CALLOUT ═══ -->
+    <div class="miso-privacy-box">
+      <h3><i class="fa fa-user-shield" style="color:var(--miso-orange)"></i> Permissions with a Purpose</h3>
+      <p>We believe digital wellbeing apps must hold themselves to the highest ethical and privacy standards. Miso is built by NextInt Inc with complete transparency:</p>
+      
+      <div class="miso-privacy-points">
+        <div class="miso-p-card">
+          <h4>📱 Android Accessibility Service</h4>
+          <p>Used strictly to detect when a selected protected app opens so Miso can display its gentle screen break overlay. Miso <strong>never</strong> reads screen content, messages, passwords, or personal data.</p>
+        </div>
+        <div class="miso-p-card">
+          <h4>📷 On-Device Camera Movement Detection</h4>
+          <p>Camera permission is used solely during active movement sessions for real-time body pose estimation. Miso <strong>never</strong> records, stores, or uploads your workout video or photos anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ROUTINE ═══ -->
+<section class="miso-routine-section">
+  <div class="miso-container">
+    <div class="miso-section-header">
+      <div class="sec-tag-miso">🌱 Simple Daily Habit</div>
+      <h2>How Miso Fits Your Day</h2>
+      <p>Build a healthier relationship with your smartphone in four simple, guilt-free steps.</p>
+    </div>
+
+    <div class="miso-steps-grid">
+      <div class="miso-step-card">
+        <div class="miso-step-num">1</div>
+        <h4>Choose Protected Apps</h4>
+        <p>Pick the 1 or 2 social, gaming, or video apps that drain your time without you noticing.</p>
+      </div>
+
+      <div class="miso-step-card">
+        <div class="miso-step-num">2</div>
+        <h4>Focus with Miso</h4>
+        <p>Start a 5 to 45-minute focus session. Put your phone down and dive into your books or work.</p>
+      </div>
+
+      <div class="miso-step-card">
+        <div class="miso-step-num">3</div>
+        <h4>Move to Earn Time</h4>
+        <p>Need extra minutes? Do 10 quick squats or a 30s plank. Re-energize your body and earn minutes.</p>
+      </div>
+
+      <div class="miso-step-card">
+        <div class="miso-step-num">4</div>
+        <h4>Live in Real Life</h4>
+        <p>Use your earned minutes mindfully, or close the app and enjoy more room for what truly matters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ SECTION ═══ -->
+<section class="miso-faq-section" id="faq">
+  <div class="miso-container">
+    <div class="miso-section-header">
+      <div class="sec-tag-miso">❓ Common Questions</div>
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know about Miso, screen credits, and permissions.</p>
+    </div>
+
+    <div class="miso-faq-grid">
+      <div class="miso-faq-item active">
+        <div class="miso-faq-question" onclick="toggleMisoFaq(this)">
+          <span>What makes Miso different from other screen time blockers?</span>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div class="miso-faq-answer">
+          Most screen blockers rely on aggressive lockouts, harsh warnings, or guilt-inducing shame. Miso treats digital wellbeing with compassion. It uses warm cozy art, a sleeping cat companion, and a positive movement-earning loop. Instead of feeling restricted, you feel empowered to step away, stretch, and return with intention.
+        </div>
+      </div>
+
+      <div class="miso-faq-item">
+        <div class="miso-faq-question" onclick="toggleMisoFaq(this)">
+          <span>How does camera-based rep counting work? Is it private?</span>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div class="miso-faq-answer">
+          Miso uses lightweight, on-device computer vision models to count exercise repetitions (push-ups, squats, jumping jacks, sit-ups, and planks). The video feed is analyzed frame-by-frame entirely inside your phone's memory and is discarded immediately. No video frames, photographs, or recordings are ever saved to storage or transmitted over the internet.
+        </div>
+      </div>
+
+      <div class="miso-faq-item">
+        <div class="miso-faq-question" onclick="toggleMisoFaq(this)">
+          <span>How do earned minutes and credits work?</span>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div class="miso-faq-answer">
+          One credit equals one minute of extra app time. You earn minutes by doing movement breaks (1 rep = 1 min; 30s plank = 1 min). Earned minutes stay stored locally on your device. If you ever need immediate minutes without exercise, optional 30-credit packs are available in Google Play.
+        </div>
+      </div>
+
+      <div class="miso-faq-item">
+        <div class="miso-faq-question" onclick="toggleMisoFaq(this)">
+          <span>Why does Miso need Android Accessibility permission?</span>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div class="miso-faq-answer">
+          Android requires Accessibility service access so that Miso can detect when you open an app on your protected list. When you have no remaining minutes, Miso displays its cozy resting break screen. Miso's service does not request, view, or record screen contents, text inputs, notifications, or keystrokes.
+        </div>
+      </div>
+
+      <div class="miso-faq-item">
+        <div class="miso-faq-question" onclick="toggleMisoFaq(this)">
+          <span>Who develops Miso and how can I get support?</span>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <div class="miso-faq-answer">
+          Miso is developed by NextInt Inc (Vijay Sonawale). For support, feedback, feature suggestions, or privacy questions, reach out directly via email at <strong>sonawalesvijay@gmail.com</strong>.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA SECTION ═══ -->
+<section class="miso-cta">
+  <div class="miso-container">
+    <h2>Make room for your day with Miso 🐾</h2>
+    <p>Start small. Put the phone aside. Enjoy more peaceful focus, healthy stretch breaks, and intentional screen time.</p>
+    <a href="https://play.google.com/store/apps/dev?id=6143739259234112759" target="_blank" rel="noopener" class="btn-cta-miso">
+      <i class="fab fa-google-play"></i> Download Miso on Google Play
+    </a>
+  </div>
+</section>
+
+<script>
+  function toggleMisoFaq(element) {
+    const parent = element.parentElement;
+    const wasActive = parent.classList.contains('active');
+    document.querySelectorAll('.miso-faq-item').forEach(item => {
+      item.classList.remove('active');
+    });
+    if (!wasActive) {
+      parent.classList.add('active');
+    }
+  }
+</script>
