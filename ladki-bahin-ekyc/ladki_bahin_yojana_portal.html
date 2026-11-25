@@ -613,6 +613,169 @@ permalink: /ladki_bahin_yojana_portal/
   }
   .badge-orange { background: var(--saffron-light); color: var(--saffron-dark); }
   .badge-green { background: var(--green-light); color: var(--green); }
+
+  /* ===== APP DOWNLOAD BANNER & CARDS ===== */
+  .app-download-card {
+    background: linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 100%);
+    border: 2px solid #FF8C00;
+    border-radius: 18px;
+    padding: 24px;
+    margin: 24px 0 32px;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    box-shadow: 0 6px 24px rgba(255, 107, 0, 0.12);
+  }
+  @media(max-width: 768px) {
+    .app-download-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+  .app-card-icon {
+    width: 86px;
+    height: 86px;
+    border-radius: 18px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+  .app-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .app-card-content h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1A1A2E;
+    margin-bottom: 6px;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+  }
+  .app-card-content p {
+    font-size: 13.5px;
+    color: #4B5563;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+  }
+  .app-meta-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  @media(max-width: 768px) {
+    .app-meta-badges { justify-content: center; }
+  }
+  .app-meta-badge {
+    background: #FFF3E8;
+    color: #CC5500;
+    border: 1px solid #FFD5A8;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 600;
+  }
+  .app-btn-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  @media(max-width: 768px) {
+    .app-btn-group { justify-content: center; }
+  }
+  .btn-play-store {
+    background: #111827;
+    color: #FFFFFF !important;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+  }
+  .btn-play-store:hover {
+    background: #1F2937;
+    transform: translateY(-2px);
+  }
+  .btn-play-secondary {
+    background: #FF6B00;
+    color: #FFFFFF !important;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .btn-play-secondary:hover {
+    background: #CC5500;
+    transform: translateY(-2px);
+  }
+
+  /* RELATED GUIDES GRID */
+  .related-section {
+    margin: 36px 0 20px;
+    padding-top: 28px;
+    border-top: 2px dashed #E5E7EB;
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .related-item-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .related-item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(255,107,0,0.12);
+    border-color: #FF8C00;
+  }
+  .related-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .related-item-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1A1A2E;
+    margin-bottom: 6px;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    line-height: 1.4;
+  }
+  .related-item-card p {
+    font-size: 12.5px;
+    color: #6B7280;
+    line-height: 1.5;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    margin: 0;
+  }
+  .related-link-text {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #FF6B00;
+  }
 </style>
 <style>img { max-width: 100%; height: auto; }</style>
 <style>
@@ -645,7 +808,14 @@ permalink: /ladki_bahin_yojana_portal/
 </header>
 
 <!-- NAV TABS -->
-
+<nav class="nav-tabs" aria-label="Portal Navigation">
+  <button class="nav-tab active" onclick="showSection('overview', this)">🏠 योजना माहिती</button>
+  <button class="nav-tab" onclick="showSection('app-download', this)">📲 ॲप डाऊनलोड</button>
+  <button class="nav-tab" onclick="showSection('issues', this)">⚠️ समस्या व उपाय</button>
+  <button class="nav-tab" onclick="showSection('complaint', this)">📝 तक्रार नोंदणी</button>
+  <button class="nav-tab" onclick="showSection('faq', this)">❓ प्रश्नोत्तरे (FAQ)</button>
+  <button class="nav-tab" onclick="showSection('contact', this)">📞 संपर्क व हेल्पलाईन</button>
+</nav>
 
 <main>
 
@@ -656,6 +826,33 @@ permalink: /ladki_bahin_yojana_portal/
       <div>
         <h2>लाडकी बहीण योजना म्हणजे काय?</h2>
         <p>महाराष्ट्र शासनाने सुरू केलेली ही योजना राज्यातील <strong>21 ते 65 वर्षे</strong> वयोगटातील पात्र महिलांना दर महिन्याला <strong>₹1,500</strong> आर्थिक सहाय्य प्रदान करते. योजनेद्वारे महिलांचे जीवनमान उंचावणे व त्यांना आर्थिकदृष्ट्या सक्षम करणे हे मुख्य उद्दिष्ट आहे.</p>
+      </div>
+    </div>
+
+    <!-- PROMINENT APP DOWNLOAD CARD -->
+    <div class="app-download-card">
+      <div class="app-card-icon">
+        <img src="https://play-lh.googleusercontent.com/Bq5hk3vz7sOl1geE_TQjHV1T_vCcR_VP4yoNC6KyJf2NPswAhLWQbQjaQ_iJD521KB3ALJtplPGy1foHdIU6hg=s512-rw" alt="लाडकी बहीण ॲप आयकॉन" width="86" height="86" loading="lazy">
+      </div>
+      <div class="app-card-content" style="flex:1;">
+        <h3>📲 लाडकी बहीण योजना माहिती व eKYC मदत ॲप (Android)</h3>
+        <p>अर्ज स्थिती (Application Status), eKYC पडताळणी, ₹1,500 हप्ता तारीख आणि लाभार्थी यादी एकाच ठिकाणी मोफत तपासा.</p>
+        <div class="app-meta-badges">
+          <span class="app-meta-badge">★ 4.4 रेटिंग</span>
+          <span class="app-meta-badge">17,000+ डाऊनलोड्स</span>
+          <span class="app-meta-badge">मोफत ॲप</span>
+          <span class="app-meta-badge">मराठी भाषा</span>
+          <span class="app-meta-badge">Developer: NextInt Inc</span>
+        </div>
+        <div class="app-btn-group">
+          <a href="https://play.google.com/store/apps/details?id=com.nextintinc.ladaki_bahin_yojna" target="_blank" rel="noopener" class="btn-play-store">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a2.222 2.222 0 0 1-.61-.926V2.74c.143-.362.355-.68.61-.926zm11.24 11.24l2.485-2.486-11.45-6.61 8.965 9.096zm0 1.892l-8.965 9.096 11.45-6.61-2.485-2.486zm1.332-1.332l3.418-1.973c1.077-.622 1.077-1.637 0-2.259l-3.418-1.973-1.892 1.892 1.892 2.313z"/></svg>
+            Google Play वर Install करा
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.nextintinc.narishakti_doot_app" target="_blank" rel="noopener" class="btn-play-secondary">
+            🌸 Nari Shakti Doot App
+          </a>
+        </div>
       </div>
     </div>
 
@@ -728,9 +925,184 @@ permalink: /ladki_bahin_yojana_portal/
       <span class="alert-icon">ℹ️</span>
       <div><strong>महत्त्वाचे:</strong> योजनेचे लाभ थेट आधार-लिंक्ड बँक खात्यात जमा केले जातात. जर आधार बँकेशी लिंक नसेल तर लाभ मिळणार नाही. नजीकच्या बँकेत जाऊन आधार लिंकिंग करा.</div>
     </div>
+
+    <!-- RELATED GUIDES IN OVERVIEW -->
+    <div class="related-section">
+      <div class="section-title">📚 संबंधित महत्त्वाचे लेख व मार्गदर्शन</div>
+      <div class="related-grid">
+        <a href="/ladki-bahin-yojana-ekyc-app/" class="related-item-card">
+          <div>
+            <div class="related-icon">🔐</div>
+            <h4>eKYC कसे करावे? — संपूर्ण सोपे मार्गदर्शन</h4>
+            <p>Aadhaar OTP व बायोमेट्रिक eKYC स्टेप-बाय-स्टेप प्रक्रिया, एरर उपाय व कागदपत्रे.</p>
+          </div>
+          <div class="related-link-text">मार्गदर्शन वाचा →</div>
+        </a>
+        <a href="/ladki-bahin-yojana-apply-online-2026/" class="related-item-card">
+          <div>
+            <div class="related-icon">📝</div>
+            <h4>नवीन ऑनलाईन अर्ज प्रक्रिया 2026</h4>
+            <p>पात्र महिलांसाठी नवीन रेजिस्ट्रेशन, आवश्यक कागदपत्रे व हमीपत्र भरण्याची माहिती.</p>
+          </div>
+          <div class="related-link-text">अर्ज कसा करावा →</div>
+        </a>
+        <a href="/ladki-bahin-yojana-installment-date-2026/" class="related-item-card">
+          <div>
+            <div class="related-icon">💰</div>
+            <h4>₹4,500 हप्ता तारीख व बँक स्टेटस</h4>
+            <p>फेब्रुवारी, मार्च व एप्रिल 2026 हप्त्याचे DBT पेमेंट कधी जमा होणार? सविस्तर वेळापत्रक.</p>
+          </div>
+          <div class="related-link-text">तारीख तपासा →</div>
+        </a>
+        <a href="/ladki-bahin-yojana-beneficiary-list-check-2026/" class="related-item-card">
+          <div>
+            <div class="related-icon">📋</div>
+            <h4>Beneficiary List मध्ये नाव कसे तपासावे?</h4>
+            <p>गावनिहाय व वॉर्डनिहाय पात्र महिलांची लाभार्थी यादी ऑनलाईन पाहण्याची सोपी पद्धत.</p>
+          </div>
+          <div class="related-link-text">यादी तपासा →</div>
+        </a>
+        <a href="/nari-shakti-doot-app-complete-guide-2026/" class="related-item-card">
+          <div>
+            <div class="related-icon">🌸</div>
+            <h4>Nari Shakti Doot नवीन ॲप गाईड</h4>
+            <p>जुने ॲप बंद झाले? नवीन ॲप डाऊनलोड, लॉगिन व eKYC संपूर्ण माहिती.</p>
+          </div>
+          <div class="related-link-text">नवीन ॲप माहिती →</div>
+        </a>
+        <a href="/solve-ekyc-login-errors/" class="related-item-card">
+          <div>
+            <div class="related-icon">🛠️</div>
+            <h4>eKYC व Login त्रुटींवर उपाय</h4>
+            <p>OTP न येणे, आधार इनव्हॅलिड, बँक अनमॅप या सर्व त्रुटींवर 100% काम करणारे उपाय.</p>
+          </div>
+          <div class="related-link-text">त्रुटी सोडवा →</div>
+        </a>
+      </div>
+    </div>
+
   </section>
 
-  <!-- ===== SECTION 2: ISSUES ===== -->
+  <!-- ===== SECTION: APP DOWNLOAD ===== -->
+  <section id="app-download" class="section">
+    <div class="hero-banner">
+      <div class="hero-icon">📲</div>
+      <div>
+        <h2>लाडकी बहीण योजना अधिकृत मोबाईल ॲप्स</h2>
+        <p>स्मार्टफोनवरून थेट लाडकी बहीण योजनेची माहिती, अर्ज स्थिती, eKYC पडताळणी आणि हप्त्यांचे अलर्ट्स मिळवण्यासाठी खालील ॲप्स मोफत डाऊनलोड करा.</p>
+      </div>
+    </div>
+
+    <!-- PRIMARY APP -->
+    <div class="app-download-card" style="border-color:#138808;">
+      <div class="app-card-icon">
+        <img src="https://play-lh.googleusercontent.com/Bq5hk3vz7sOl1geE_TQjHV1T_vCcR_VP4yoNC6KyJf2NPswAhLWQbQjaQ_iJD521KB3ALJtplPGy1foHdIU6hg=s512-rw" alt="लाडकी बहीण ॲप" width="86" height="86">
+      </div>
+      <div class="app-card-content" style="flex:1;">
+        <h3>१. लाडकी बहीण योजना माहिती व eKYC मदत ॲप (Unofficial)</h3>
+        <p>महाराष्ट्र शासनाच्या लाडकी बहीण योजनेतील महिलांसाठी अत्यंत उपयुक्त ॲप. eKYC मार्गदर्शन, अर्जाची स्थिती तपासणे, हमीपत्र नमुने, आणि ₹1,500 हप्ता अलर्ट्स मिळवा.</p>
+        <div class="app-meta-badges">
+          <span class="app-meta-badge" style="background:#E8F5E9; color:#138808; border-color:#A5D6A7;">★ 4.4 Rating</span>
+          <span class="app-meta-badge">17,000+ Downloads</span>
+          <span class="app-meta-badge">100% मोफत</span>
+          <span class="app-meta-badge">Package: com.nextintinc.ladaki_bahin_yojna</span>
+        </div>
+        <div class="app-btn-group">
+          <a href="https://play.google.com/store/apps/details?id=com.nextintinc.ladaki_bahin_yojna" target="_blank" rel="noopener" class="btn-play-store" style="background:#138808;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a2.222 2.222 0 0 1-.61-.926V2.74c.143-.362.355-.68.61-.926zm11.24 11.24l2.485-2.486-11.45-6.61 8.965 9.096zm0 1.892l-8.965 9.096 11.45-6.61-2.485-2.486zm1.332-1.332l3.418-1.973c1.077-.622 1.077-1.637 0-2.259l-3.418-1.973-1.892 1.892 1.892 2.313z"/></svg>
+            Google Play वरून मोफत मिळवा
+          </a>
+          <a href="/ladki-bahin-yojana-ekyc-app/" class="btn-play-secondary">
+            📖 ॲप विषयी संपूर्ण माहिती वाचा
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECONDARY APP -->
+    <div class="app-download-card">
+      <div class="app-card-icon" style="background:#FFE4E6; display:flex; align-items:center; justify-content:center; font-size:42px;">
+        🌸
+      </div>
+      <div class="app-card-content" style="flex:1;">
+        <h3>२. Nari Shakti Doot App (नवीन अपडेटेड आवृत्ती)</h3>
+        <p>जुने नारी शक्ती दूत ॲप बंद झाल्यानंतर नवीन ॲपद्वारे लाडकी बहीण योजना अर्ज व eKYC पडताळणी करण्याची संपूर्ण माहिती आणि थेट लिंक.</p>
+        <div class="app-meta-badges">
+          <span class="app-meta-badge">★ 4.3 Rating</span>
+          <span class="app-meta-badge">10,000+ Downloads</span>
+          <span class="app-meta-badge">मोफत ॲप</span>
+          <span class="app-meta-badge">Package: com.nextintinc.narishakti_doot_app</span>
+        </div>
+        <div class="app-btn-group">
+          <a href="https://play.google.com/store/apps/details?id=com.nextintinc.narishakti_doot_app" target="_blank" rel="noopener" class="btn-play-store">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a2.222 2.222 0 0 1-.61-.926V2.74c.143-.362.355-.68.61-.926zm11.24 11.24l2.485-2.486-11.45-6.61 8.965 9.096zm0 1.892l-8.965 9.096 11.45-6.61-2.485-2.486zm1.332-1.332l3.418-1.973c1.077-.622 1.077-1.637 0-2.259l-3.418-1.973-1.892 1.892 1.892 2.313z"/></svg>
+            Nari Shakti Doot Install करा
+          </a>
+          <a href="/nari-shakti-doot-app-complete-guide-2026/" class="btn-play-secondary">
+            📖 नारी शक्ती दूत गाईड वाचा
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- APP FEATURES GRID -->
+    <div class="section-title">⭐ मोबाईल ॲपची प्रमुख वैशिष्ट्ये (Key Features)</div>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-header green">🔐 eKYC पडताळणी मदत</div>
+        <div class="info-card-body">
+          <p style="font-size:13.5px; line-height:1.6; color:#444;">तुमचा आधार क्रमांक व OTP वापरून घरबसल्या eKYC कसे पूर्ण करावे याचे साध्या मराठी भाषेत स्टेप-बाय-स्टेप मार्गदर्शन.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-header blue">📊 अर्जाची स्थिती (Status)</div>
+        <div class="info-card-body">
+          <p style="font-size:13.5px; line-height:1.6; color:#444;">अर्ज मंजूर झाला की प्रलंबित आहे? थेट अधिकृत सर्व्हरशी कनेक्ट होऊन तुमच्या अर्जाची ताजी स्थिती जाणून घ्या.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-header orange">💰 हप्ता तारीख व बँक DBT ट्रॅकर</div>
+        <div class="info-card-body">
+          <p style="font-size:13.5px; line-height:1.6; color:#444;">दरमहा येणाऱ्या ₹1,500 हप्त्याची तारीख, DBT क्रेडिट स्टेटस आणि बँक लिंकिंग कसे तपासावे याची अचूक माहिती.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-header red">⚠️ त्रुटी निवारण (Error Solutions)</div>
+        <div class="info-card-body">
+          <p style="font-size:13.5px; line-height:1.6; color:#444;">आधार मॅच न होणे, बँक अनमॅप असणे किंवा बायोमेट्रिक फेल होणे यासारख्या सर्व सामान्य अडचणींवर खात्रीशीर उपाय.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-warning">
+      <span class="alert-icon">⚠️</span>
+      <div><strong>सूचना:</strong> हे ॲप NextInt Inc द्वारे विकसित केलेले मार्गदर्शक (Unofficial Guide) ॲप आहे. आम्ही शासकीय कागदपत्रांचे संरक्षण करतो आणि कोणतीही गोपनीय माहिती गोळा करत नाही. अधिकृत कामकाजासाठी नेहमी ladakibahin.maharashtra.gov.in या शासकीय पोर्टलचा वापर करावा.</div>
+    </div>
+
+    <!-- RELATED GUIDES IN APP SECTION -->
+    <div class="related-section">
+      <div class="section-title">📚 अधिक उपयुक्त माहिती व लेख</div>
+      <div class="related-grid">
+        <a href="/ladki-bahin-yojana-ekyc-app/" class="related-item-card">
+          <div class="related-icon">🔐</div>
+          <h4>eKYC कसे करावे? — संपूर्ण सोपे मार्गदर्शन</h4>
+          <p>Aadhaar OTP व बायोमेट्रिक eKYC स्टेप-बाय-स्टेप प्रक्रिया.</p>
+        </a>
+        <a href="/ladki-bahin-yojana-installment-date-2026/" class="related-item-card">
+          <div class="related-icon">💰</div>
+          <h4>₹4,500 हप्ता तारीख व बँक स्टेटस 2026</h4>
+          <p>फेब्रुवारी, मार्च व एप्रिल हप्त्याची ताजी तारीख व DBT ट्रॅकिंग.</p>
+        </a>
+        <a href="/ladki-bahin-yojana-beneficiary-list-check-2026/" class="related-item-card">
+          <div class="related-icon">📋</div>
+          <h4>Beneficiary List तपासा — 69 लाख नावे</h4>
+          <p>गावनिहाय व वॉर्डनिहाय यादी ऑनलाईन कशी पाहावी?</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: ISSUES ===== -->
   <section id="issues" class="section">
 
 
@@ -812,7 +1184,7 @@ permalink: /ladki_bahin_yojana_portal/
     </div>
 
     <div style="text-align:center; margin-top: 12px;">
-      <button class="btn btn-primary" onclick="showSection('complaint', document.querySelectorAll('.nav-tab')[2])">
+      <button class="btn btn-primary" onclick="showSection('complaint')">
         📝 तक्रार नोंदवा →
       </button>
     </div>
@@ -1071,8 +1443,21 @@ permalink: /ladki_bahin_yojana_portal/
 function showSection(id, tab) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  if (tab) tab.classList.add('active');
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('active');
+  }
+  if (tab && tab.classList) {
+    tab.classList.add('active');
+  } else {
+    document.querySelectorAll('.nav-tab').forEach(t => {
+      const oc = t.getAttribute('onclick') || '';
+      if (oc.includes("'" + id + "'")) {
+        t.classList.add('active');
+      }
+    });
+  }
+  window.scrollTo({ top: 80, behavior: 'smooth' });
 }
 
 function goToStep(n) {
